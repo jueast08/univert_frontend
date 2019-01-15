@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { GardenComponent } from './garden/garden.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ProfileToastComponent } from './profile-toast/profile-toast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     GardenComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProfileToastComponent
   ],
   imports: [
     BrowserModule,
