@@ -17,6 +17,9 @@ import { QuestListComponent } from './quest-list/quest-list.component';
 import { NoProfileToastComponent } from './no-profile-toast/no-profile-toast.component';
 import { ButtonComponent } from './button/button.component';
 import { FloatingMapComponent } from './floating-map/floating-map.component';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -33,12 +36,15 @@ import { FloatingMapComponent } from './floating-map/floating-map.component';
     QuestListComponent,
     NoProfileToastComponent,
     ButtonComponent,
-    FloatingMapComponent
+    FloatingMapComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CommonModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
