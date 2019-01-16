@@ -20,13 +20,18 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@ionic-native/nfc": "^4.19.0",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0-alpha.0",
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
     "animate.css": "^3.7.0",
     "bootstrap": "^4.0.0",
     "core-js": "^2.5.4",
     "ngx-toastr": "^9.1.1",
+    "fs": "0.0.1-security",
+    "nfc-pcsc": "^0.7.1",
+    "ngx-socket-io": "^2.1.1",
     "rxjs": "~6.2.0",
+    "socket.io-client": "^2.2.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
