@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
     console.log('connected');
     this.socket.on('message', function(nfc_id){
       console.log(nfc_id);
-      this.connectedUserService.connect(nfc_id);
+      this.ConnectedUserService.connect(nfc_id);
     });
   }
 
