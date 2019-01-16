@@ -1,8 +1,8 @@
 <div class="itemList">
-  <h1 class="itemListTitle">Vos badges</h1>
+  <h1 class="itemListTitle">Vos objets</h1>
   <ul class="itemListContent">
-    <li class="itemListElement" *ngFor="let item of itemListContent">
+    <app-item class="itemListElement" *ngFor="let item of itemListContent">
       {{item}}
-    </li>
+    </app-item>
   </ul>
 </div>
