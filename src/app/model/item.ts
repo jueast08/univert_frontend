@@ -1,5 +1,5 @@
 export class Item {
-    itemIcon: string;
-    itemName: string;
-    itemDescription: string;
+    icon: string;
+    name: string;
+    description: string;
 }

@@ -1,5 +1,5 @@
 export class Badge {
-    badgeIcon: string;
-    badgeName: string;
-    badgeDescription: string;
+    icon: string;
+    name: string;
+    description: string;
 }

@@ -1,14 +1,14 @@
-.badge {
+figure {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin-left: 10px;
 }
 
-.badgeIcon {
+figure img {
+    width: 50px;
 }
 
-.badgeContent {
-}
-
-.badgeName {
-}
-
-.badgeDescription {
+figcaption {
+    text-transform: capitalize;
 }
