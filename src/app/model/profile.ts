@@ -1,4 +1,5 @@
 import { Badge } from "./badge";
+import { Item } from "./item";
 
 export class Profile {
     name: String;
@@ -7,4 +8,5 @@ export class Profile {
     avatar: String;
     experience: Number;
     badges: Badge[];
+    items: Item[];
 }

@@ -14,11 +14,11 @@ import { Profile } from '../model/profile';
 export class ProfileComponent implements OnInit {
 
     userProfile: Profile;
-     
+    
     constructor(public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
-	    this.userProfile = this.connectedUserService.userProfile;
+	this.userProfile = this.connectedUserService.userProfile;
     }
 
 }

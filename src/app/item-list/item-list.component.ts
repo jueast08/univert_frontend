@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Item } from '../model/item';
-import { ItemService } from '../services/item.service';
 
 @Component({
     selector: 'app-item-list',
@@ -9,12 +8,12 @@ import { ItemService } from '../services/item.service';
 })
 export class ItemListComponent implements OnInit {
 
-    itemListContent = [];
+    @Input()
+    items: Item[];
     
-    constructor(public itemService : ItemService ) { }
+    constructor() { }
 
     ngOnInit() {
-	this.itemService.getItems("1").subscribe(items => this.itemListContent = items);
     }
     
 }

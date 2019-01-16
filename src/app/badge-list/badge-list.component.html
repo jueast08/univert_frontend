@@ -1,8 +1,6 @@
 <div class="badgeList">
   <h1 class="badgeListTitle">Vos badges</h1>
   <ul class="badgeListContent">
-    <app-badge class="badgeListElement" *ngFor="let badge of badgeListContent" [badge]="badge">
-      {{badge}}
-    </app-badge>
+    <app-badge class="badgeListElement" *ngFor="let badge of badges" [badge]="badge"></app-badge>
   </ul>
 </div>

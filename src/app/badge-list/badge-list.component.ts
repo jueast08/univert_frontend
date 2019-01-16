@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Badge } from '../model/badge';
-import { BadgeService } from '../services/badge.service';
 
 @Component({
     selector: 'app-badge-list',
@@ -9,12 +8,12 @@ import { BadgeService } from '../services/badge.service';
 })
 export class BadgeListComponent implements OnInit {
 
-    badgeListContent = [];
+    @Input()
+    badges: Badge[];
     
-    constructor(public badgeService : BadgeService ) { }
+    constructor() { }
 
     ngOnInit() {
-	this.badgeService.getBadges("1").subscribe(badges => this.badgeListContent = badges);
     }
 
 }
