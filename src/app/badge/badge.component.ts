@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BadgeComponent implements OnInit {
 
-    badgeIcon="";
-    badgeName="";
-    badgeDescription="";
+    icon="";
+    name="";
+    description="";
     
     constructor() { }
 
     ngOnInit() {
-	this.badgeIcon="https://www.forceplus.com/wp-content/uploads/2016/08/medal-1.png";
-	this.badgeName="Maître arroseur";
-	this.badgeDescription="A accompli 50 quêtes d'arrosage.";
+	this.icon="https://www.forceplus.com/wp-content/uploads/2016/08/medal-1.png";
+	this.name="Maître arroseur";
+	this.description="A accompli 50 quêtes d'arrosage.";
     }
 
 }
