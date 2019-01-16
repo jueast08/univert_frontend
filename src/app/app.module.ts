@@ -9,6 +9,7 @@ import { GardenComponent } from './garden/garden.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileToastComponent } from './profile-toast/profile-toast.component';
 import { QuestComponent } from './quest/quest.component';
+import { NoProfileToastComponent } from './no-profile-toast/no-profile-toast.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QuestComponent } from './quest/quest.component';
     GardenComponent,
     ProfileComponent,
     ProfileToastComponent,
-    QuestComponent
+    QuestComponent,
+    NoProfileToastComponent
   ],
   imports: [
     BrowserModule,
