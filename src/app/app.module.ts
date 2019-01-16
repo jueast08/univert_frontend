@@ -29,7 +29,7 @@ import { FloatingMapComponent } from './floating-map/floating-map.component';
     BadgeComponent,
     BadgeListComponent,
     ItemComponent,
-    ItemListComponent
+    ItemListComponent,
     QuestListComponent,
     NoProfileToastComponent,
     ButtonComponent,
