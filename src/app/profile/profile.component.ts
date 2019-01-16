@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { BadgeComponent } from '../badge/badge.component';
+import { BadgeListComponent } from '../badge-list/badge-list.component';
+import { ItemComponent } from '../item/item.component';
+import { ItemListComponent } from '../item-list/item-list.component';
+import { ConnectedUserService } from '../services/connected-user.service';
+import { Profile } from '../model/profile';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+    selector: 'app-profile',
+    templateUrl: './profile.component.html',
+    styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+    userProfile: Profile;
+     
+    constructor(public connectedUserService: ConnectedUserService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+	    this.userProfile = this.connectedUserService.userProfile;
+    }
 
 }

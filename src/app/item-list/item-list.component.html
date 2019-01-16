@@ -1,0 +1,8 @@
+<div class="itemList">
+  <h1 class="itemListTitle">Vos objets</h1>
+  <ul class="itemListContent">
+    <app-item class="itemListElement" *ngFor="let item of itemListContent" [item]="item">
+      {{item}}
+    </app-item>
+  </ul>
+</div>

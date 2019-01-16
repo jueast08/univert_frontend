@@ -1,0 +1,14 @@
+figure {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+figure img {
+    width: 50px;
+}
+
+figcaption {
+    text-transform: capitalize;
+}

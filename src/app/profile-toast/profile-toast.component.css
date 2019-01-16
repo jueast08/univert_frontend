@@ -1,11 +1,32 @@
-div {
-    display: inline-block;
-    border: solid black 2px;
-    background-color: aqua;
+#avatar {
+    height: 65px;
+    width: 65px;
+    background-color: #FDFDFD;
+    border: #1D1D1D solid 2px;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
 }
 
-div * {
-    display: inline;
-    padding-right: 10px;
+#avatar img{
+    height: 50px;
+}
+#ident {
     padding-left: 10px;
+}
+
+h1 {
+    color: #1D1D1D;
+    font-family: futura;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 12px; 
+}
+
+span {
+    font-size: 10px;
 }
