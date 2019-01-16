@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileToastComponent } from './profile-toast/profile-toast.component';
 import { QuestComponent } from './quest/quest.component';
 import { QuestListComponent } from './quest-list/quest-list.component';
+import { NoProfileToastComponent } from './no-profile-toast/no-profile-toast.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuestListComponent } from './quest-list/quest-list.component';
     ProfileComponent,
     ProfileToastComponent,
     QuestComponent,
-    QuestListComponent
+    QuestListComponent,
+    NoProfileToastComponent
   ],
   imports: [
     BrowserModule,
