@@ -9,6 +9,10 @@ import { GardenComponent } from './garden/garden.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileToastComponent } from './profile-toast/profile-toast.component';
 import { QuestComponent } from './quest/quest.component';
+import { BadgeComponent } from './badge/badge.component';
+import { BadgeListComponent } from './badge-list/badge-list.component';
+import { ItemComponent } from './item/item.component';
+import { ItemListComponent } from './item-list/item-list.component';
 import { QuestListComponent } from './quest-list/quest-list.component';
 import { NoProfileToastComponent } from './no-profile-toast/no-profile-toast.component';
 import { ButtonComponent } from './button/button.component';
@@ -22,6 +26,10 @@ import { FloatingMapComponent } from './floating-map/floating-map.component';
     ProfileComponent,
     ProfileToastComponent,
     QuestComponent,
+    BadgeComponent,
+    BadgeListComponent,
+    ItemComponent,
+    ItemListComponent
     QuestListComponent,
     NoProfileToastComponent,
     ButtonComponent,
