@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestListComponent implements OnInit {
 
+  nbAvailableQuests = 3;
+  developped = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  develop() {
+    if (this.developped) {
+
+    }
+    else {
+
+    }
+    this.developped = !this.developped;
   }
 
 }
