@@ -1,8 +1,6 @@
 .quest {
     border-style:solid;
-    width:50%;
     height:100px;
-    float:right;
 }
 
 .questIcon {
@@ -16,10 +14,4 @@
 
 .questName {
     font-size:150%;
-}
-
-.questText {
-}
-
-.questStatus {
 }
