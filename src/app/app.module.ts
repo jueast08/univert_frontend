@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { GardenComponent } from './garden/garden.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileToastComponent } from './profile-toast/profile-toast.component';
+import { QuestComponent } from './quest/quest.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProfileToastComponent } from './profile-toast/profile-toast.component';
     HomeComponent,
     GardenComponent,
     ProfileComponent,
-    ProfileToastComponent
+    ProfileToastComponent,
+    QuestComponent
   ],
   imports: [
     BrowserModule,
