@@ -5,8 +5,8 @@ import { Observable, of } from 'rxjs';
 
 
 export const QUESTS: Quest[] = [
-  {title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le chassant géant !"},
-  {title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le chassant géant !"},
+  {title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le chassant géant !", status:"A faire"},
+  {title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le chassant géant !", status:"faite"},
 ] 
 
 
