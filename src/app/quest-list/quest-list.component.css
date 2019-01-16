@@ -1,8 +1,50 @@
-h3 {
-    background-color: #1D1D1D;
-    color: #FDFDFD;
-    padding: 10px 20px;
+.quest-list-frame {
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+  top: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+}
+
+.quest-list-slider-button {
+    background-color: #f9962b;
     border-top-left-radius: 15px 15px;
     border-top-right-radius: 15px 15px;
-    margin: 0;
+    border: 5px solid #FFFFFF;
+    border-bottom: 5px solid #f9962b;
+    width: 200px;
+    height: 20px;
+    z-index: 999;
+
+    margin-bottom: -7px;
+}
+
+.quest-list-slider-content-frame {
+  border-top-left-radius: 15px 15px;
+  border-top-right-radius: 15px 15px;
+  background-color: #f9962b;
+  border: 5px solid #FFFFFF;
+  border-bottom: none;
+
+  height: 100%;
+  overflow-y: hidden;
+  width: 100%;
+  z-index: 998;
+
+  padding: 5px;
+  padding-bottom: 0%;
+}
+
+.quest-list-slider-content-frame .quest-list-slider-content-inner-frame {
+  background-color: #f7e5c9;
+  border-top-left-radius: 15px 15px;
+  border-top-right-radius: 15px 15px;
+  max-height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

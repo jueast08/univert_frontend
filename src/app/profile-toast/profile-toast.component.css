@@ -1,21 +1,78 @@
-#avatar {
-    height: 65px;
-    width: 65px;
-    background-color: #FDFDFD;
-    border: #1D1D1D solid 2px;
-    border-radius: 50%;
-    float: left;
-    text-align: center;
+.avatar-frame {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
 }
 
-#avatar img{
-    height: 50px;
+.avatar-circle-frame {
+  padding: 0 5px;
+  margin-right: 0 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#ident {
-    padding-left: 10px;
+.avatar-circle-frame .avatar-outer-circle {
+  background-color: #FFFFFF;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-box-shadow: 3px 3px 0px 1px rgba(160,192,163,1);
+  -moz-box-shadow: 3px 3px 0px 1px rgba(160,192,163,1);
+  box-shadow: 3px 3px 0px 1px rgba(160,192,163,1);
 }
 
-h1 {
+.avatar-circle-frame .avatar-outer-circle .avatar-inner-circle {
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+
+
+    background: rgba(249,146,43,1);
+    background: -moz-linear-gradient(top, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(249,146,43,1)), color-stop(100%, rgba(244,116,56,1)));
+    background: -webkit-linear-gradient(top, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
+    background: -o-linear-gradient(top, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
+    background: -ms-linear-gradient(top, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
+    background: linear-gradient(to bottom, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9922b', endColorstr='#f47438', GradientType=0 );
+
+
+    -webkit-box-shadow: inset 0px -5px 0px 0px #f05e36, 0px -2px 0px 0px rgba(253,175,61,1);
+    -moz-box-shadow: inset 0px -5px 0px 0px #f05e36, 0px -2px 0px 0px rgba(253,175,61,1);
+    box-shadow: inset 0px -5px 0px 0px #f05e36, 0px -2px 0px 0px rgba(253,175,61,1);
+
+
+}
+
+.avatar-info-frame {
+    /* padding-left: 10px; */
+    margin-left: 5px;
+    padding-top: 10px;
+    color: #FFFFFF;
+
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.avatar-info-frame span {
+    display: block;
+    font-weight: bold;
+}
+
+.avatar-info-frame .avatar-profile-name{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* h1 {
     color: #1D1D1D;
     font-family: futura;
     padding-top: 10px;
@@ -24,9 +81,9 @@ h1 {
 }
 
 h2 {
-    font-size: 12px; 
+    font-size: 12px;
 }
 
 span {
     font-size: 10px;
-}
+} */

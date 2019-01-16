@@ -1,10 +1,12 @@
-<div>
-  <div id="avatar">
-    <img src="../../assets/{{userProfile.avatar}}" />
+<div class="avatar-frame">
+  <div class="avatar-circle-frame">
+    <div class="avatar-outer-circle">
+      <div class="avatar-inner-circle"></div>
+    </div>
   </div>
-  <div id="ident">
-    <h1>{{userProfile.name}}</h1>
-    <h2>LVL. {{userProfile.level}}</h2>
-    <span>{{userProfile.experience}} xp</span>
+  <div class="avatar-info-frame">
+    <span class="avatar-profile-name">{{userProfile.name}}</span>
+    <!-- <span>LVL. {{userProfile.level}}</span>
+    <span>{{userProfile.experience}} xp</span> -->
   </div>
 </div>

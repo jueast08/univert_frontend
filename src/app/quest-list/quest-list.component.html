@@ -1,20 +1,28 @@
-<h3 (click)="develop()">
-  Quêtes ({{nbAvailableQuests}})
-  <span *ngIf="developped">-</span>
-  <span *ngIf="!developped">+</span>
-</h3>
+<div class="quest-list-frame">
+    <div class="quest-list-slider-button" (click)="develop()">
+      <!-- Quêtes ({{nbAvailableQuests}}) -->
+      <!-- <span *ngIf="developped">-</span>
+      <span *ngIf="!developped">+</span> -->
+    </div>
 
-<div *ngIf="developped">
-  <div class="toDo">
-    <h1>À faire</h1>
-    <app-quest *ngFor="let quest of toDo" [quest]="quest">{{quest}}</app-quest>
+    <!-- <div class="quest-list-slider-content-frame" *ngIf="developped"> -->
+    <div class="quest-list-slider-content-frame">
+      <div class="quest-list-slider-content-inner-frame">
+        <div class="toDo">
+          <h1>À faire</h1>
+          <app-quest *ngFor="let quest of toDo" [quest]="quest">{{quest}}</app-quest>
+        </div>
+        <div class="onGoing">
+          <h1>En cours</h1>
+          <app-quest *ngFor="let quest of onGoing" [quest]="quest">{{quest}}</app-quest>
+        </div>
+        <div class="done">
+          <h1>Finies</h1>
+          <app-quest *ngFor="let quest of done" [quest]="quest">{{quest}}</app-quest>
+        </div>
+      </div>
   </div>
-  <div class="onGoing">
-    <h1>En cours</h1>
-    <app-quest *ngFor="let quest of onGoing" [quest]="quest">{{quest}}</app-quest>
-  </div>
-  <div class="done">
-    <h1>Finies</h1>
-    <app-quest *ngFor="let quest of done" [quest]="quest">{{quest}}</app-quest>
-  </div>
+
+
+
 </div>
