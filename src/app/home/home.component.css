@@ -1,0 +1,68 @@
+#home-outer-container {
+  width: 100%;
+  background: blue;
+
+}
+
+.home-title-banner {
+  width: 100%;
+}
+
+.home-title-banner span{
+  width: 100%;
+  text-align: center;
+}
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: green;
+
+}
+
+.home-page-container #home-subtitle{
+  display: flex;
+  background: red;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.home-page-container #home-subtitle {
+
+}
+
+.home-page-container #home-subtitle {
+  backround: red;
+}
+
+.home-page-container #home-button-group {
+  display: flex;
+  background: blue;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  all: unset;
+  width: 200px;
+
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+
+  background: #f6e6b4; /* Old browsers */
+  background: -webkit-linear-gradient(top, #f6e6b4 0%,#ed9017 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6e6b4 0%,#ed9017 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* FF3.6-15 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+}
