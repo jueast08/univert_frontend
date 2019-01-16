@@ -1,3 +1,8 @@
-<p>
-  item-list works!
-</p>
+<div class="itemList">
+  <h1 class="itemListTitle">Vos badges</h1>
+  <ul class="itemListContent">
+    <li class="itemListElement" *ngFor="let item of itemListContent">
+      {{item}}
+    </li>
+  </ul>
+</div>
