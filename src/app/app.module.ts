@@ -9,6 +9,10 @@ import { GardenComponent } from './garden/garden.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileToastComponent } from './profile-toast/profile-toast.component';
 import { QuestComponent } from './quest/quest.component';
+import { BadgeComponent } from './badge/badge.component';
+import { BadgeListComponent } from './badge-list/badge-list.component';
+import { ItemComponent } from './item/item.component';
+import { ItemListComponent } from './item-list/item-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { QuestComponent } from './quest/quest.component';
     GardenComponent,
     ProfileComponent,
     ProfileToastComponent,
-    QuestComponent
+    QuestComponent,
+    BadgeComponent,
+    BadgeListComponent,
+    ItemComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,
