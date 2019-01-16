@@ -1,11 +1,11 @@
 div {
-    display: inline-block;
+    width: 175px;
     border: solid black 2px;
     background-color: aqua;
+    
 }
 
 div * {
     display: inline;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 15px;
 }
