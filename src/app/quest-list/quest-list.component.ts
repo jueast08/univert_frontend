@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Quest } from '../model/quest';
+import { QuestService } from '../quest.service';
 
 @Component({
   selector: 'app-quest-list',
@@ -10,9 +12,12 @@ export class QuestListComponent implements OnInit {
   nbAvailableQuests = 3;
   developped = false;
 
-  constructor() { }
+  quests: Quest[]
+
+  constructor(public questService: QuestService) { }
 
   ngOnInit() {
+    this.questService.getQuestsForGarden("1").subscribe(quests => this.quests = quests);
   }
 
   develop() {

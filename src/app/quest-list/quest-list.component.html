@@ -5,7 +5,5 @@
 </h3>
 
 <div *ngIf="developped">
-  <app-quest></app-quest>
-  <app-quest></app-quest>
-  <app-quest></app-quest>
+  <app-quest *ngFor="let quest of quests"></app-quest>
 </div>
