@@ -1,0 +1,25 @@
+.quest {
+    border-style:solid;
+    width:50%;
+    height:100px;
+    float:right;
+}
+
+.questIcon {
+    height:100%;
+    float:left;
+}
+
+.questContent {
+    display:grid;
+}
+
+.questName {
+    font-size:150%;
+}
+
+.questText {
+}
+
+.questStatus {
+}
