@@ -15,14 +15,14 @@ export class HomeComponent implements OnInit {
   private url = 'http://localhost:3000';
   private socket = null;
 
-  constructor() {
+  constructor(public connectedUserService : ConnectedUserService) {
   }
 
   ngOnInit() {
     this.socket = io.connect(this.url);
     console.log('connected');
-    this.socket.on('message', function(msg){
-      console.log(msg);
+    this.socket.on('message', function(nfc_id){
+      this.connectedUserService.connect(nfc_id);
     });
   }
 
