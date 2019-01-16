@@ -1,14 +1,14 @@
-.item {
+figure {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin-left: 10px;
 }
 
-.itemIcon {
+figure img {
+    width: 50px;
 }
 
-.itemContent {
-}
-
-.itemName {
-}
-
-.itemDescription {
+figcaption {
+    text-transform: capitalize;
 }

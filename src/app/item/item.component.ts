@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
     
-    itemIcon="";
-    itemName="";
-    itemDescription="";
+    icon="";
+    name="";
+    description="";
     
     constructor() { }
 
     ngOnInit() {
-	this.itemIcon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcucQzG-Trh4A11iJG4XP7W7IqibNkRNzWv80i66EO3XiRLsEi";
-	this.itemName="Pelle";
-	this.itemDescription="Pelle de jardinage de base, pour creuser des trous.";
+	this.icon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcucQzG-Trh4A11iJG4XP7W7IqibNkRNzWv80i66EO3XiRLsEi";
+	this.name="Pelle";
+	this.description="Pelle de jardinage de base, pour creuser des trous.";
     }
 
 }
