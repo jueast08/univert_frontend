@@ -5,9 +5,13 @@
   <div class="home-page-margins" id="home-title-banner">
     <span>Bonjour et bienvenu sur Uni Vert</span>
   </div>
-  <div id="home-map-image">
-    <img class="animated infinite pulse slow" src="../../assets/map_iso.png"/>
+
+  <div id="home-floating-map">
+    <app-floating-map></app-floating-map>
   </div>
+  <!-- <div id="home-map-image">
+    <img class="animated infinite pulse slow" src="../../assets/map_iso.png"/>
+  </div> -->
 
   <div class="home-page-margins home-page-container">
     <div id="home-subtitle">
@@ -16,8 +20,12 @@
     </div>
     <div id="home-button-group">
 
-      <div class="button-gradient button-wrapper home-button"><button>Se connecter</button></div>
-      <div class="button-gradient button-wrapper home-button"><button>Voir votre royaume</button></div>
+      <div class="home-button">
+        <app-button [text]="'Se connecter'"></app-button>
+      </div>
+      <div class="home-button">
+        <app-button [text]="'Voir votre royaume'"></app-button>
+      <div>
 
     </div>
     <div id="home-logo-group">
