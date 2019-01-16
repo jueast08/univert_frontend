@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { FloatingMapComponent } from '../floating-map/floating-map.component';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,12 @@ import { FloatingMapComponent } from '../floating-map/floating-map.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit() {
   }
 
+  openToaster() {
+    this.toastr.show('Cette fonctionnalité n\'est pas encore disponible', '');
+  }
 }
