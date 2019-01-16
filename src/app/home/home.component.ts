@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { FloatingMapComponent } from '../floating-map/floating-map.component';
+import { ConnectedUserService } from '../services/connected-user.service';
 
 import io from "socket.io-client";
 
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
     this.socket = io.connect(this.url);
     console.log('connected');
     this.socket.on('message', function(nfc_id){
+      console.log(nfc_id);
       this.connectedUserService.connect(nfc_id);
     });
   }
