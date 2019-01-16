@@ -3,6 +3,8 @@ import { BadgeComponent } from '../badge/badge.component';
 import { BadgeListComponent } from '../badge-list/badge-list.component';
 import { ItemComponent } from '../item/item.component';
 import { ItemListComponent } from '../item-list/item-list.component';
+import { ConnectedUserService } from '../services/connected-user.service';
+import { Profile } from '../model/profile';
 
 @Component({
     selector: 'app-profile',
@@ -11,17 +13,12 @@ import { ItemListComponent } from '../item-list/item-list.component';
 })
 export class ProfileComponent implements OnInit {
 
-    avatar = "";
-    name = "";
-    experience = 0;
-    
-    
-    constructor() { }
+    userProfile: Profile;
+     
+    constructor(public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
-	this.avatar = "https://previews.123rf.com/images/virinka/virinka1212/virinka121200099/16873066-carotte-dessin-anim%C3%A9.jpg";
-	this.name = "Jean-Pouic";
-	this.experience = 0;
+	this.userProfile = this.connectedUserService.user;
     }
 
 }

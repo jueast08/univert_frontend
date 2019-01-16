@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { Profile } from '../model/profile';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ConnectedUserService {
 
-  user: Profile = {name: "Perceval de GALLES", level: 10, id: "26"};
+    user: Profile = {name: "Perceval de GALLES", level: 10, id: "26", avatar: "../../assets/carrot_profile.png", experience: 1000};
 
-  constructor() { }
+    constructor() { }
 
-  connect(id: string) {
-    this.user = {name: "Perceval de GALLES", level: 10, id: "26"};
-  }
+    connect(id: string) {
+	this.user = {name: "Perceval de GALLES", level: 10, id: "26", avatar: "../../assets/carrot_profile.png", experience: 1000};
+    }
 
 }
