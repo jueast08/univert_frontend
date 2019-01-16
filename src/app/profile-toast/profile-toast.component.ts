@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConnectedUserService } from '../services/connected-user.service';
+import { Profile } from '../model/profile';
 
 @Component({
   selector: 'app-profile-toast',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileToastComponent implements OnInit {
 
-  constructor() { }
+  userProfile: Profile;
+
+  constructor(public connectedUserService: ConnectedUserService) { }
 
   ngOnInit() {
+    this.userProfile = this.connectedUserService.user;
   }
 
 }
