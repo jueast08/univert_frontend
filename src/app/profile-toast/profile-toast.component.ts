@@ -14,7 +14,7 @@ export class ProfileToastComponent implements OnInit {
     constructor(public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
-	this.userProfile = this.connectedUserService.user;
+	this.userProfile = this.connectedUserService.userProfile;
     }
 
 }
