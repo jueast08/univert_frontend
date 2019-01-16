@@ -13,6 +13,8 @@ import { BadgeComponent } from './badge/badge.component';
 import { BadgeListComponent } from './badge-list/badge-list.component';
 import { ItemComponent } from './item/item.component';
 import { ItemListComponent } from './item-list/item-list.component';
+import { QuestListComponent } from './quest-list/quest-list.component';
+import { NoProfileToastComponent } from './no-profile-toast/no-profile-toast.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ItemListComponent } from './item-list/item-list.component';
     BadgeListComponent,
     ItemComponent,
     ItemListComponent
+    QuestListComponent,
+    NoProfileToastComponent
   ],
   imports: [
     BrowserModule,

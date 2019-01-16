@@ -1,0 +1,9 @@
+<h3 (click)="develop()">
+  Quêtes ({{nbAvailableQuests}})
+  <span *ngIf="developped">-</span>
+  <span *ngIf="!developped">+</span>
+</h3>
+
+<div *ngIf="developped">
+  <app-quest *ngFor="let quest of quests"></app-quest>
+</div>
