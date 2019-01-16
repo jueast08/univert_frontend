@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input  } from '@angular/core';
+import { Badge } from '../model/badge';
 
 @Component({
     selector: 'app-badge',
@@ -7,16 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BadgeComponent implements OnInit {
 
-    badgeIcon="";
-    badgeName="";
-    badgeDescription="";
+    @Input()
+    badge: Badge;
     
     constructor() { }
 
-    ngOnInit() {
-	this.badgeIcon="https://www.forceplus.com/wp-content/uploads/2016/08/medal-1.png";
-	this.badgeName="Maître arroseur";
-	this.badgeDescription="A accompli 50 quêtes d'arrosage.";
-    }
+    ngOnInit() { }
 
 }

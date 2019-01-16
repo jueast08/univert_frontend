@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Item } from '../model/item';
 
 @Component({
     selector: 'app-item',
@@ -7,16 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
     
-    itemIcon="";
-    itemName="";
-    itemDescription="";
+    @Input()
+    item: Item;
     
     constructor() { }
 
-    ngOnInit() {
-	this.itemIcon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcucQzG-Trh4A11iJG4XP7W7IqibNkRNzWv80i66EO3XiRLsEi";
-	this.itemName="Pelle";
-	this.itemDescription="Pelle de jardinage de base, pour creuser des trous.";
-    }
+    ngOnInit() { }
 
 }
