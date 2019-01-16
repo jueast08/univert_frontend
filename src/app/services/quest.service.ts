@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Quest } from './model/quest';
+import { Quest } from '../model/quest';
 import { Observable, of } from 'rxjs';
 
 
