@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileToastComponent } from '../profile-toast/profile-toast.component';
 
 @Component({
   selector: 'app-garden',
