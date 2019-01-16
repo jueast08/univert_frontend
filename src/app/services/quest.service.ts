@@ -28,4 +28,12 @@ export class QuestService {
 	return of(QUESTLIST);
     }
 
+    takeQuest(id_quest: string, id_user: string) {
+
+    }
+
+    validQuest(id_quest: string) {
+        
+    }
+
 }
