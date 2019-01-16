@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ButtonComponent } from '../button/button.component';
+import { FloatingMapComponent } from '../floating-map/floating-map.component';
 
 @Component({
   selector: 'app-home',
