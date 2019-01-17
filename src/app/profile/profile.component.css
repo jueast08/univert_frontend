@@ -118,7 +118,16 @@
   height: 100%;
   background: red;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.profile-content-section-xp-bar-wrapper img{
+  width: 100%;
+  margin-top: -30px;
 }
 
 .profile-content-section-xp-bar-outer, .profile-content-section-xp-bar-inner {
@@ -138,6 +147,18 @@
   background: #8ba68e;
 }
 
+.profile-content-section-badge-wrapper{
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.profile-content-section-badge-title{
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: bold;
+}
 
 .identity {
 }
