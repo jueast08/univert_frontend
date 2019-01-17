@@ -15,11 +15,7 @@ export class AddQuestFormComponent implements OnInit {
     icon = new  FormControl('');
     id = new  FormControl('');
     
-    quest: Quest = {
-	title: "",
-	description: "",
-	icon: "",
-	id: 0};
+    quest: Quest;
     
     constructor( public questService : QuestService ) { }
 

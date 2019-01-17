@@ -1,13 +1,13 @@
 <ngx-smart-modal #myModal identifier="myModal">
   <div class="addQuestForm">
       <label for="title">Titre se la quête </label>
-      <input id="title" type="text" [formControl]="title" class="add-quest-input"/>
+      <input id="title" type="text" [formControl]="" class="add-quest-input"/>
       <label for="description">Description se la quête</label>
-      <input id="description" type="text" [formControl]="description" class="add-quest-input"/>
+      <input id="description" type="text" [formControl]="" class="add-quest-input"/>
       <label for="icon">Icone se la quête (DEV)</label>
-      <input id="icon" type="text" [formControl]="icon" class="add-quest-input">
+      <input id="icon" type="text" [formControl]="" class="add-quest-input">
       <label id="id">Identifiant se la quête (DEV) :</label>
-      <input id="id" type="number" [formControl]="id" class="add-quest-input">
+      <input id="id" type="number" [formControl]="" class="add-quest-input">
       <button class="submitButton" (click)="submitQuest()">Soumettre quête</button>
   </div>
 </ngx-smart-modal>

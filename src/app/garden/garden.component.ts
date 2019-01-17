@@ -35,6 +35,10 @@ export class GardenComponent implements OnInit {
         this.nfcConnectionService.init();
     }
 
+    submitQuest() {
+        
+    }
+
 
 
 }
