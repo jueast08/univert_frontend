@@ -1,3 +1,4 @@
+
 <div class="quest-list-frame">
   <div class="quest-list-frame-inner">
     <div class="quest-list-slider-button" (click)="develop()">
@@ -20,6 +21,20 @@
 
 
 
+
+
+<div class="hidden">
+  <div class="toDo" *ngIf="context!='profile'">
+    <h1>À faire</h1>
+    <app-quest *ngFor="let quest of toDo" [quest]="quest" [context]="context" [type]="typeTodo">{{quest}}</app-quest>
+  </div>
+  <div class="onGoing">
+    <h1>En cours</h1>
+    <app-quest *ngFor="let quest of onGoing" [quest]="quest" [context]="context" [type]="typeOngoing">{{quest}}</app-quest>
+  </div>
+  <div class="done">
+    <h1>Finies</h1>
+    <app-quest *ngFor="let quest of done" [quest]="quest" [context]="context" [type]="typeDone">{{quest}}</app-quest>
   </div>
 
 </div>

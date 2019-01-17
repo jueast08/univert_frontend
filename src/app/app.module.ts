@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -24,7 +25,7 @@ import { QuestItemComponent } from './quest-item/quest-item.component';
 import { ToastrModule } from 'ng6-toastr-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
-
+import { AddQuestFormComponent } from './add-quest-form/add-quest-form.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
     ButtonComponent,
     FloatingMapComponent,
     AvatarCircleComponent,
-    QuestItemComponent
+    QuestItemComponent,
+    AddQuestFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
     BrowserAnimationsModule,
     CommonModule,
     ToastrModule.forRoot(),
-    NgxSmartModalModule.forRoot()
+    NgxSmartModalModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

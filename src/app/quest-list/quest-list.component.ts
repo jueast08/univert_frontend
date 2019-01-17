@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Quest } from '../model/quest';
-import { QuestService } from '../services/quest.service';
 import { QuestList } from '../model/quest-list';
 
 import { QuestItemComponent } from '../quest-item/quest-item.component';
@@ -14,25 +13,36 @@ import * as $ from 'jquery'
 })
 export class QuestListComponent implements OnInit {
 
-    nbAvailableQuests = 3;
+    @Input()
+    questList: QuestList;
+
+    @Input()
+    context: String;
+    
+    nbAvailableQuests = 0;
     developped = false;
 
     toDo: Quest[]
     onGoing: Quest[]
     done: Quest[]
 
-    questList: QuestList;
+
 
     @Input()
     title: string = "Quests";
 
-    constructor(public questService: QuestService) { }
+    typeTodo= "todo";
+    typeOngoing= "ongoing";
+    typeDone= "done";
+
+
+    constructor() { }
 
     ngOnInit() {
-    	this.questService.getQuestsForGarden("1").subscribe(questList => this.questList = questList);
-    	this.toDo = this.questList.toDo;
-    	this.onGoing = this.questList.onGoing;
-    	this.done = this.questList.done;
+	this.toDo = this.questList.toDo;
+	this.onGoing = this.questList.onGoing;
+	this.done = this.questList.done;
+	this.nbAvailableQuests = this.toDo.length
     }
 
     develop() {

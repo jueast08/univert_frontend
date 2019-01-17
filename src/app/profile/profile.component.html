@@ -6,6 +6,9 @@
   <div class="badgeList">
     <app-badge-list [badges]="userProfile.badges"></app-badge-list>
   </div>
+  <div class="questList">
+    <app-quest-list [questList]="userProfile.questList" [context]="context"></app-quest-list>
+  </div>
   <div class="buttonToGarden" routerLink="/jardin">
     <app-button [text]="'Retour au jardin'"></app-button>
   <div>
