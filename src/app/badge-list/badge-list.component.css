@@ -1,11 +1,13 @@
-.badgeList {
+.badge-list-frame{
+
 }
 
-.badgeListTitle {
+.badge-list-content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.badgeListContent {
-}
 
-.badgeListElement {
+.badge-list-element {
+  
 }

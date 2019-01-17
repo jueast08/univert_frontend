@@ -6,6 +6,12 @@ import { ItemListComponent } from '../item-list/item-list.component';
 import { ConnectedUserService } from '../services/connected-user.service';
 import { Profile } from '../model/profile';
 import { QuestListComponent } from '../quest-list/quest-list.component';
+import { BadgeComponent } from '../badge/badge.component';
+import { BadgeListComponent } from '../badge-list/badge-list.component';
+
+import { ButtonComponent } from '../button/button.component';
+
+import { AvatarCircleComponent } from '../avatar-circle/avatar-circle.component';
 
 @Component({
     selector: 'app-profile',

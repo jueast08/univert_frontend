@@ -1,5 +1,15 @@
 
+.profile-user-info{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+.profile-user-button-wrapper {
+  height: 50px;
+}
 .orange-gradient {
   background: rgba(248,147,44,1);
   background: -moz-linear-gradient(top, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
@@ -15,12 +25,16 @@
   background-color: #b0d8b7;
   height: 100vh;
   width: 100%;
+
+
+  position: relative;
+  padding: 10px;
 }
 
 .profile-content-section{
     height: 100%;
     width: 100%;
-    background: red;
+    margin-top: 20px;
 
     /* -moz-box-shadow: 0px -5px 0px 0px rgba(0,0,0,0.25);
     box-shadow: 0px -5px 0px 0px rgba(0,0,0,0.25); */
@@ -43,7 +57,6 @@
 .profile-content-section-inner{
   width: 100%;
   height: 100%;
-  background-color: green;
   margin-top: -100px;
 
 
@@ -51,7 +64,6 @@
 
 .profile-content-section-quest-wrapper{
   height: 200px;
-  background-color: violet;
 
   display: flex;
 
@@ -96,7 +108,6 @@
   padding: 10px;
   transition: height 0.8s linear;
 
-  background-color: red;
 }
 
 .profile-content-section-my-quests-inner-frame {
@@ -116,7 +127,6 @@
 .profile-content-section-xp-bar-wrapper{
   width: 50px;
   height: 100%;
-  background: red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,6 +159,7 @@
 
 .profile-content-section-badge-wrapper{
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
   width: 100%;
@@ -158,6 +169,16 @@
   color: #FFFFFF;
   font-size: 15px;
   font-weight: bold;
+  text-align: center;
+}
+
+.profile-add-quest {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
 }
 
 .identity {
