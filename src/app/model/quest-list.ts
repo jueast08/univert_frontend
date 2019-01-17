@@ -1,7 +1,7 @@
 import { Quest } from './quest';
 
 export class QuestList {
-    toDo: Quest[];
-    onGoing: Quest[];
+    todo: Quest[];
+    ongoing: Quest[];
     done: Quest[];
 }

@@ -1,10 +1,12 @@
-<div class="avatar-frame">
-  <div class="avatar-circle-frame">
-    <app-avatar-circle></app-avatar-circle>
-  </div>
-  <div class="avatar-info-frame">
-    <span class="avatar-profile-name">{{userProfile.name}}</span>
-    <!-- <span>LVL. {{userProfile.level}}</span>
-    <span>{{userProfile.experience}} xp</span> -->
+<div *ngIf="this.connectedUserService.userProfile">
+  <div class="avatar-frame">
+    <div class="avatar-circle-frame">
+      <app-avatar-circle></app-avatar-circle>
+    </div>
+    <div class="avatar-info-frame">
+      <span class="avatar-profile-name">{{this.connectedUserService.userProfile.name}}</span>
+      <!-- <span>LVL. {{userProfile.level}}</span>
+      <span>{{userProfile.experience}} xp</span> -->
+    </div>
   </div>
 </div>
