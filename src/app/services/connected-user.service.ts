@@ -3,6 +3,9 @@ import { Profile } from '../model/profile';
 import { ProfileService } from './profile.service';
 import { Observable, of } from 'rxjs';
 
+import { catchError, map, tap } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Injectable({
     providedIn: 'root'
 })
@@ -24,15 +27,23 @@ export class ConnectedUserService {
 		 description: "Pelle de jardinage de base, pour creuser des trous."
         }]
     }
+
+    private verifyBadgeUrl = 'http://localhost:8080/univert/univert/userservice/verifyBadge/';
     
 
-    constructor(public profileService: ProfileService) { }
+    constructor(private http: HttpClient,
+        public profileService: ProfileService) { }
 
-    connect(id: string) : Observable<boolean>{
-        this.profileService.getProfile(id).subscribe(userProfile => {
+    connect(id: string) : Observable<{string}>{
+        return this.http.get<{string}>(this.verifyBadgeUrl+"id").pipe(
+            tap(_ => console.log('connected'))
+          );;
+    }
+    
+    connectUser(userId: string) {
+        this.profileService.getProfile(userId).subscribe(userProfile => {
             this.userProfile = userProfile;
         });
-        return of(true);
     }
 
 }
