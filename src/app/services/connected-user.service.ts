@@ -6,6 +6,10 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+export class userId {
+    idUser: string;
+}
+
 @Injectable({
     providedIn: 'root'
 })
@@ -28,14 +32,14 @@ export class ConnectedUserService {
         }]
     }
 
-    private verifyBadgeUrl = 'http://localhost:8080/univert/univert/userservice/verifyBadge/';
+    private verifyBadgeUrl = 'http://192.168.43.32:8080/univert/univert/userservice/verifyBadge/';
     
 
     constructor(private http: HttpClient,
         public profileService: ProfileService) { }
 
-    connect(id: string) : Observable<{string}>{
-        return this.http.get<{string}>(this.verifyBadgeUrl+"id").pipe(
+    connect(id: string) : Observable<userId>{
+        return this.http.get<userId>(this.verifyBadgeUrl+id).pipe(
             tap(_ => console.log('connected'))
           );;
     }
