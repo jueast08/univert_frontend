@@ -34,7 +34,7 @@ export class QuestComponent implements OnInit {
 	    this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id);
 	}
 	if ( this.context === "profile" ) {
-	    this.questService.validQuest(this.quest.id);
+	    //this.questService.validQuest(this.quest.id);
 	}
     }
     
