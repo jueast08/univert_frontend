@@ -1,7 +1,13 @@
-<div class="addQuestForm">
-    <label>Titre se la quête : <input name="title" type="text" [formControl]="title" class="inputText"></label>
-    <label>Description se la quête : <input name="description" type="text" [formControl]="description" class="inputText"></label>
-    <label>Icone se la quête (DEV) : <input name="icon" type="text" [formControl]="icon" class="inputText"></label>
-    <label>Identifiant se la quête (DEV) : <input name="id" type="number" [formControl]="id" class="inputText"></label>
-    <button class="submitButton" (click)="submitQuest()">Soumettre quête</button>
-</div>
+<ngx-smart-modal #myModal identifier="myModal">
+  <div class="addQuestForm">
+      <label for="title">Titre se la quête </label>
+      <input id="title" type="text" [formControl]="title" class="add-quest-input"/>
+      <label for="description">Description se la quête</label>
+      <input id="description" type="text" [formControl]="description" class="add-quest-input"/>
+      <label for="icon">Icone se la quête (DEV)</label>
+      <input id="icon" type="text" [formControl]="icon" class="add-quest-input">
+      <label id="id">Identifiant se la quête (DEV) :</label>
+      <input id="id" type="number" [formControl]="id" class="add-quest-input">
+      <button class="submitButton" (click)="submitQuest()">Soumettre quête</button>
+  </div>
+</ngx-smart-modal>
