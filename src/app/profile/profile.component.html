@@ -1,3 +1,11 @@
+<ngx-smart-modal #myModal identifier="myModal">
+  <h1>Title</h1>
+  <p>Some stuff...</p>
+
+  <button (click)="myModal.close()">Close</button>
+</ngx-smart-modal>
+
+
 <div class="profile-frame">
 
   <div class="profile-user-info">
@@ -12,7 +20,7 @@
     </div>
   </div>
 
-  <img class="profile-add-quest" src="../../assets/Icone+.png"/>
+  <img (click)="ngxSmartModalService.getModal('myModal').open()" class="profile-add-quest" src="../../assets/Icone+.png"/>
 
   <div class="profile-content-section">
     <div class="profile-content-section-half-circle"></div>

@@ -13,6 +13,8 @@ import { AvatarCircleComponent } from '../avatar-circle/avatar-circle.component'
 import { QuestList } from '../model/quest-list';
 import { QuestService } from '../services/quest.service';
 
+import { NgxSmartModalService } from 'ngx-smart-modal';
+
 @Component({
     selector: 'app-profile',
     templateUrl: './profile.component.html',
@@ -25,7 +27,9 @@ export class ProfileComponent implements OnInit {
 
     questList: QuestList;
 
-    constructor(public connectedUserService: ConnectedUserService, public questService: QuestService) { }
+    constructor(public connectedUserService: ConnectedUserService,
+      public questService: QuestService,
+    public ngxSmartModalService: NgxSmartModalService) { }
 
     ngOnInit() {
          this.userProfile = this.connectedUserService.userProfile;
