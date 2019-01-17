@@ -4,6 +4,7 @@ import { AvatarCircleComponent } from '../avatar-circle/avatar-circle.component'
 import { Quest } from '../model/quest';
 import { QuestService } from '../services/quest.service';
 import { ConnectedUserService } from '../services/connected-user.service';
+import { QuestListService } from '../services/quest-list.service';
 
 @Component({
   selector: 'app-quest-item',
@@ -31,13 +32,9 @@ export class QuestItemComponent implements OnInit {
 
   icon: string;
 
-  constructor(public questService: QuestService, public connectedUserService: ConnectedUserService) { }
+  constructor(public questService: QuestService, public connectedUserService: ConnectedUserService, public questListService: QuestListService) { }
 
   ngOnInit() {
-    if ( this.context === "garden" && this.type === "todo" ) {
-        this.clickable = true;
-    }
-
     if (this.type === "ongoing") {
       this.icon = "IconeJaune";
     } else if (this.type === "done") {
@@ -59,9 +56,16 @@ export class QuestItemComponent implements OnInit {
   }
 
   onClick() {
-    if (this.quest && this.clickable && this.connectedUserService.userProfile) {
+    if (this.quest && (this.type === "todo" || this.type==="ongoing" ) && this.connectedUserService.userProfile) {
       console.log(this.quest);
-      this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
+      if (this.context == "profile") {
+        this.questService.validQuest(this.quest.id).subscribe();
+        this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
+      }
+      else {
+        this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
+        this.questListService.refreshForGarden();
+      }
     }
   }
 }
