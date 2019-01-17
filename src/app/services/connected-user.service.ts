@@ -22,10 +22,10 @@ export class ConnectedUserService {
 		 name: "Pelle",
 		 description: "Pelle de jardinage de base, pour creuser des trous."
 		}],
-	questList: { toDo : [{title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le serpent géant !", status:"A faire", icon:"../../assets/carrot_profile.png"}, {title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le serpent géant !", status:"A faire", icon:"../../assets/carrot_profile.png"}],
-		     onGoing: [{title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png"}, {title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png"}, {title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png"}],
+	questList: { toDo : [{title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le serpent géant !", status:"A faire", icon:"../../assets/carrot_profile.png", id:2}, {title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le serpent géant !", status:"A faire", icon:"../../assets/carrot_profile.png", id:2}],
+		     onGoing: [{title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png", id:3}, {title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png", id:4}, {title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png", id:5}],
 		     done:
-		     [{title : "Arroser", description: "Arroser les plantes", status:"Fini", icon:"../../assets/carrot_profile.png"}]
+		     [{title : "Arroser", description: "Arroser les plantes", status:"Fini", icon:"../../assets/carrot_profile.png", id:6}]
 		   }
     }
     

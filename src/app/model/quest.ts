@@ -3,4 +3,5 @@ export class Quest {
     description: string;
     status: string;
     icon: string;
+    id: number;
 }
