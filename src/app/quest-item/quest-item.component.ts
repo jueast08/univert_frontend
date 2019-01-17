@@ -1,7 +1,9 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { AvatarCircleComponent } from '../avatar-circle/avatar-circle.component';
 
-
+import { Quest } from '../model/quest';
+import { QuestService } from '../services/quest.service';
+import { ConnectedUserService } from '../services/connected-user.service';
 
 @Component({
   selector: 'app-quest-item',
