@@ -6,6 +6,7 @@ import { Observable, of } from 'rxjs';
 
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ipserver } from './conf';
 
 export class userId {
     idUser: string;
@@ -51,7 +52,7 @@ export class ConnectedUserService {
 		   }
     }
 
-    private verifyBadgeUrl = 'http://192.168.43.32:8080/univert/univert/userservice/verifyBadge/';
+    private verifyBadgeUrl = ipserver + "univert/univert/userservice/verifyBadge/";
     
 
     constructor(private http: HttpClient,
@@ -70,7 +71,7 @@ export class ConnectedUserService {
     }
 
     takeQuest(quest: Quest) {
-	this.userProfile.questList.onGoing.push(quest);
+	 //this.userProfile.questList.onGoing.push(quest);
     }
 
 }

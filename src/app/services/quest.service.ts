@@ -4,46 +4,27 @@ import { Quest } from '../model/quest';
 import { QuestList } from '../model/quest-list';
 import { Observable, of } from 'rxjs';
 import { ConnectedUserService } from '../services/connected-user.service';
+import { catchError, map, tap } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ipserver } from './conf';
 
 @Injectable({
     providedIn: 'root'
 })
 export class QuestService {
+	
+	private urlForGarden = ipserver + "/univert/univert/questservice/garden/";
 
-    questList : QuestList =
-	{ toDo : [{title : "Quête du serpent géant du lac de l'ombre",
-		   description: "Aller chasser le serpent géant !",
-		   icon:"../../assets/carrot_profile.png",
-		   id:1},
-		  {title : "Quête du serpent géant du lac de l'ombre",
-		   description: "Aller chasser le serpent géant !",
-		   icon:"../../assets/carrot_profile.png",
-		   id:2}],
-	  onGoing: [{title : "Planter des choux",
-		     description: "Aller planter des choux fleurs (et non romanesco)...",
-		     icon:"../../assets/carrot_profile.png",
-		     id:3},
-		    {title : "Planter des choux",
-		     description: "Aller planter des choux fleurs (et non romanesco)...",
-		     icon:"../../assets/carrot_profile.png",
-		     id:4},
-		    {title : "Planter des choux",
-		     description: "Aller planter des choux fleurs (et non romanesco)...",
-		     icon:"../../assets/carrot_profile.png",
-		     id:5}],
-	  done: [{title : "Arroser",
-		  description: "Arroser les plantes",
-		  icon:"../../assets/carrot_profile.png",
-		  id:6}]
-	};
-    
-    constructor(public connectedUserService : ConnectedUserService) { }
-    /*
-      getQuestsForGarden(id: string) : Observable<QuestList> {
-      return of(QUESTLIST);
-      }
+	constructor(private http: HttpClient,
+		public connectedUserService : ConnectedUserService) { }
 
-      getQuestsForUser(id: string) : Observable<QuestList> {
+    getQuestsForGarden(id: string) : Observable<QuestList> {
+		return this.http.get<QuestList>(this.urlForGarden+id+"/quests").pipe(
+            tap(_ => console.log('connected'))
+          );
+    }
+
+      /*getQuestsForUser(id: string) : Observable<QuestList> {
       return of(QUESTLIST);
       }*/
 
