@@ -19,7 +19,10 @@ export class GardenComponent implements OnInit {
     constructor(public questService: QuestService) { }
 
     ngOnInit() {
-	this.questList = this.questService.questList;
+        this.questService.getQuestsForGarden("1").subscribe(list => {
+            this.questList = list;
+            console.log(list);
+        });
     }
 
 }
