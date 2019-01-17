@@ -39,8 +39,7 @@
       <div class="profile-content-section-badge-wrapper">
         <span class="profile-content-section-badge-title">Mes Badges</span>
         <div class="profile-content-section-badge-list">
-          <app-badge-list [badges]="userProfile.badges"></app-badge-list>
-          <app-badge></app-badge>
+          <app-badge-list [badges]="this.connectedUserService.userProfile.listBadge"></app-badge-list>
         </div>
       </div>
 

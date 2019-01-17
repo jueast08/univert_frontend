@@ -1,4 +1,4 @@
-<div class="badge-frame">
-    <img class="badge-icon" src="../../assets/Etoile.png"/>
-    <span class="badge-name">Badge</span>
+<div class="badge-frame" *ngIf="badge">
+    <img class="badge-icon" src="../../assets/{{badge.b_picture}}"/>
+    <span class="badge-name">{{badge.b_description}}</span>
 </div>

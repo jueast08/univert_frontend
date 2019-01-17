@@ -24,7 +24,8 @@ export class ProfileComponent implements OnInit {
     constructor(public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
-	     this.userProfile = this.connectedUserService.userProfile;
+         this.userProfile = this.connectedUserService.userProfile;
+         console.log(this.connectedUserService.userProfile);
     }
 
 }
