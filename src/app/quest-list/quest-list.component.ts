@@ -5,6 +5,7 @@ import { QuestList } from '../model/quest-list';
 
 import { QuestItemComponent } from '../quest-item/quest-item.component';
 import * as $ from 'jquery'
+import { NgxSmartModalService } from 'ngx-smart-modal';
 
 
 @Component({
@@ -32,7 +33,7 @@ export class QuestListComponent implements OnInit {
     typeDone= "done";
 
 
-    constructor() { }
+    constructor(public ngxSmartModalService: NgxSmartModalService) { }
 
     ngOnInit() {
         console.log("bou")
