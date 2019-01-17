@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Profile } from '../model/profile';
 import { ProfileService } from './profile.service';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -27,10 +28,11 @@ export class ConnectedUserService {
 
     constructor(public profileService: ProfileService) { }
 
-    connect(id: string) {
+    connect(id: string) : Observable<boolean>{
         this.profileService.getProfile(id).subscribe(userProfile => {
             this.userProfile = userProfile;
         });
+        return of(true);
     }
 
 }

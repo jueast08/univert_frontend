@@ -5,6 +5,7 @@ import { FloatingMapComponent } from '../floating-map/floating-map.component';
 import { ToastrService } from 'ngx-toastr';
 
 import { ConnectedUserService } from '../services/connected-user.service';
+import { NfcConnectionService } from '../services/nfc-connection.service';
 
 
 @Component({
@@ -16,10 +17,13 @@ import { ConnectedUserService } from '../services/connected-user.service';
 
 export class HomeComponent implements OnInit {
 
-  constructor(private toastr: ToastrService, public connectedUserService : ConnectedUserService) {
+  constructor(private toastr: ToastrService, 
+    public connectedUserService : ConnectedUserService,
+    public nfcConnectionService: NfcConnectionService) {
   }
 
   ngOnInit() {
+    this.nfcConnectionService.init();
   }
 
   openToaster() {
