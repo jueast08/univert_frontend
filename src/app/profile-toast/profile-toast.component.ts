@@ -9,12 +9,9 @@ import { Profile } from '../model/profile';
 })
 export class ProfileToastComponent implements OnInit {
 
-    userProfile: Profile;
-
     constructor(public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
-	    this.userProfile = this.connectedUserService.userProfile;
     }
 
 }

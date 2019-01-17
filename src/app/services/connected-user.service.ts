@@ -34,7 +34,8 @@ export class ConnectedUserService {
     connectUser(userId: string) {
         this.profileService.getProfile(userId).subscribe(userProfile => {
             this.userProfile = userProfile;
-            console.log(userProfile);
+            console.log("tgyhjk")
+            console.log(this.userProfile);
         });
     }
 
