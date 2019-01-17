@@ -13,6 +13,7 @@ import { QuestService } from '../services/quest.service';
 export class GardenComponent implements OnInit {
 
     questList: QuestList;
+    context= "garden";
     
     constructor(public questService: QuestService) { }
 

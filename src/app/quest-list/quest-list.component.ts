@@ -10,7 +10,10 @@ import { QuestList } from '../model/quest-list';
 export class QuestListComponent implements OnInit {
 
     @Input()
-    questList: QuestList; 
+    questList: QuestList;
+
+    @Input()
+    context: String;
     
     nbAvailableQuests = 0;
     developped = false;
@@ -18,6 +21,10 @@ export class QuestListComponent implements OnInit {
     toDo: Quest[]
     onGoing: Quest[]
     done: Quest[]
+
+    typeTodo= "todo";
+    typeOngoing= "ongoing";
+    typeDone= "done";
 
     constructor() { }
 

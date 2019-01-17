@@ -15,6 +15,7 @@ import { QuestListComponent } from '../quest-list/quest-list.component';
 export class ProfileComponent implements OnInit {
 
     userProfile: Profile;
+    context= "profile";
     
     constructor(public connectedUserService: ConnectedUserService) { }
 

@@ -11,8 +11,24 @@ export class QuestComponent implements OnInit {
     @Input()
     quest: Quest;
 
+    @Input()
+    context: String;
+
+    @Input()
+    type: String;
+
+    clickable= false;
+
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() {
+	if ( this.context === "garden" && this.type === "todo" ) {
+	    this.clickable= true;
+	}
+    }
 
+    onClick() {
+	console.log("Click");
+    }
+    
 }
