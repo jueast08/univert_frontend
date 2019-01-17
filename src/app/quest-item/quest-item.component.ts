@@ -23,7 +23,6 @@ export class QuestItemComponent implements OnInit {
 
   clickable= false;
 
-  desc: string = "Description"
   XP: string = "100"
 
 
@@ -37,7 +36,7 @@ export class QuestItemComponent implements OnInit {
 
   ngOnInit() {
     if ( this.context === "garden" && this.type === "todo" ) {
-        this.clickable= true;
+        this.clickable = true;
     }
   }
 
