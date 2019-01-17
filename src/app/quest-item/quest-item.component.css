@@ -7,13 +7,37 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  /*add gradient*/
 }
 
+.quest-item-members {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+
 .quest-item .quest-item-icon {
+  position: relative;
   height: 50px;
   width: 50px;
   padding: 5px;
+}
 
+.quest-item .quest-item-icon .quest-item-icon-image {
+  height: 40px;
+  width: 40px;
+}
+
+.quest-item .quest-item-icon .quest-item-icon-members {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  height: 30px;
+  width: 30px;
 }
 
 .quest-item .quest-item-desc {
@@ -62,4 +86,10 @@
 .quest-item .quest-item-xp .quest-item-xp-img svg{
   margin-top: -5px;
   height: 30px;
+}
+
+
+
+.quest-item-members img{
+  width: 80%;
 }

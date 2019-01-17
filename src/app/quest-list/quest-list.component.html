@@ -3,13 +3,13 @@
   <div class="quest-list-frame-inner">
     <div class="quest-list-slider-button" (click)="develop()">
       <!-- Quêtes ({{nbAvailableQuests}}) -->
-      <span *ngIf="developped">{{ title }} - Ouvrir </span>
-      <span *ngIf="!developped">{{ title }} - Fermer </span>
+      <span *ngIf="developped">{{ title }} ▲ </span>
+      <span *ngIf="!developped">{{ title }} ▼ </span>
     </div>
 
     <div class="quest-list-slider-content-frame">
       <div class="quest-list-slider-content-inner-frame">
-        <app-quest-item></app-quest-item>
+        <app-quest-item [member_icons]="'../../assets/IconeQuetePlusieurs+.png'"></app-quest-item>
         <app-quest-item></app-quest-item>
         <app-quest-item></app-quest-item>
         <app-quest-item></app-quest-item>
