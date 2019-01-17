@@ -19,7 +19,7 @@ export class QuestService {
 	
 	private urlForGarden = ipserver + "/univert/univert/questservice/garden/";
 	private urlForUser= ipserver + "/univert/univert/questservice/user/";
-	private urlTakeQuest = ipserver + "/univert/univert/questservice/quests/";
+	private urlQuest = ipserver + "/univert/univert/questservice/quests/";
 
 	constructor(private http: HttpClient,
 		public connectedUserService : ConnectedUserService) { }
@@ -37,7 +37,7 @@ export class QuestService {
     }
 
     takeQuest(id_quest: number, id_user: Number): Observable<ResService> {
-		return this.http.post<ResService>(this.urlTakeQuest+id_quest+"/user/"+id_user, null).pipe(
+		return this.http.post<ResService>(this.urlQuest+id_quest+"/user/"+id_user, null).pipe(
             tap(_ => console.log('quest list for garden fetched'))
 		  );
     }
@@ -47,6 +47,8 @@ export class QuestService {
     }
 
     validQuest(id_quest: string) {
-        
+        return this.http.post<ResService>(this.urlQuest+id_quest+"/done", null).pipe(
+            tap(_ => console.log('quest list for garden fetched'))
+		  );
     }
 }
