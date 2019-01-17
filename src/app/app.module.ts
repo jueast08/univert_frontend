@@ -26,6 +26,7 @@ import { ToastrModule } from 'ng6-toastr-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AddQuestFormComponent } from './add-quest-form/add-quest-form.component';
+import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { AddQuestFormComponent } from './add-quest-form/add-quest-form.component
     CommonModule,
     ToastrModule.forRoot(),
     NgxSmartModalModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

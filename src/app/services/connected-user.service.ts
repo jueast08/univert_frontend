@@ -2,6 +2,14 @@ import { Injectable } from '@angular/core';
 import { Profile } from '../model/profile';
 import { Quest } from '../model/quest';
 import { ProfileService } from './profile.service';
+import { Observable, of } from 'rxjs';
+
+import { catchError, map, tap } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+export class userId {
+    idUser: string;
+}
 
 @Injectable({
     providedIn: 'root'
@@ -42,12 +50,21 @@ export class ConnectedUserService {
 			     id:6}]
 		   }
     }
+
+    private verifyBadgeUrl = 'http://192.168.43.32:8080/univert/univert/userservice/verifyBadge/';
     
 
-    constructor(public profileService: ProfileService) { }
+    constructor(private http: HttpClient,
+        public profileService: ProfileService) { }
 
-    connect(id: string) {
-        this.profileService.getProfile(id).subscribe(userProfile => {
+    connect(id: string) : Observable<userId>{
+        return this.http.get<userId>(this.verifyBadgeUrl+id).pipe(
+            tap(_ => console.log('connected'))
+          );;
+    }
+    
+    connectUser(userId: string) {
+        this.profileService.getProfile(userId).subscribe(userProfile => {
             this.userProfile = userProfile;
         });
     }

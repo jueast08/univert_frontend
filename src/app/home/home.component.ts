@@ -7,9 +7,8 @@ import { ToastrService } from 'ngx-toastr';
 import { ConnectedUserService } from '../services/connected-user.service';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { NgxSmartModalService } from 'ngx-smart-modal';
+import { NfcConnectionService } from '../services/nfc-connection.service';
 
-
-import io from "socket.io-client";
 
 @Component({
   selector: 'app-home',
@@ -19,20 +18,15 @@ import io from "socket.io-client";
 
 
 export class HomeComponent implements OnInit {
-  private url = 'http://localhost:3000';
-  private socket = null;
 
-  constructor(public toastr: ToastrManager, public connectedUserService : ConnectedUserService, public ngxSmartModalService: NgxSmartModalService) {
+  constructor(private toastr: ToastrManager, 
+    public connectedUserService : ConnectedUserService,
+    public nfcConnectionService: NfcConnectionService,
+    public ngxSmartModalService: NgxSmartModalService) {
   }
 
   ngOnInit() {
-    this.socket = io.connect(this.url);
-    console.log('connected');
-    this.socket.on('message', function(nfc_id){
-      console.log(nfc_id);
-      this.ConnectedUserService.connect(nfc_id);
-    });
-
+    this.nfcConnectionService.init();
   }
 
   connectUserByPassword(){
