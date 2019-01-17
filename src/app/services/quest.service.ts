@@ -30,7 +30,7 @@ export class QuestService {
           );
     }
 
-	getQuestsForUser(id: string) : Observable<QuestList> {
+	getQuestsForUser(id: Number) : Observable<QuestList> {
 		return this.http.get<QuestList>(this.urlForUser+id+"/quests").pipe(
             tap(_ => console.log('quest list for garden fetched'))
           );
