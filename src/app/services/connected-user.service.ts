@@ -24,9 +24,22 @@ export class ConnectedUserService {
 		 description: "Pelle de jardinage de base, pour creuser des trous."
 		}],
 	questList: { toDo : [],
-		     onGoing: [{title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png", id:3}, {title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png", id:4}, {title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png", id:5}],
-		     done:
-		     [{title : "Arroser", description: "Arroser les plantes", status:"Fini", icon:"../../assets/carrot_profile.png", id:6}]
+		     onGoing: [{title : "Planter des choux",
+				description: "Aller planter des choux fleurs (et non romanesco)...",
+				icon:"../../assets/carrot_profile.png",
+				id:3},
+			       {title : "Planter des choux",
+				description: "Aller planter des choux fleurs (et non romanesco)...",
+				icon:"../../assets/carrot_profile.png",
+				id:4},
+			       {title : "Planter des choux",
+				description: "Aller planter des choux fleurs (et non romanesco)...",
+				icon:"../../assets/carrot_profile.png",
+				id:5}],
+		     done: [{title : "Arroser",
+			     description: "Arroser les plantes",
+			     icon:"../../assets/carrot_profile.png",
+			     id:6}]
 		   }
     }
     

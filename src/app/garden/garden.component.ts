@@ -4,6 +4,7 @@ import { QuestComponent } from '../quest/quest.component';
 import { QuestListComponent } from '../quest-list/quest-list.component';
 import { QuestList } from '../model/quest-list';
 import { QuestService } from '../services/quest.service';
+import { AddQuestFormComponent } from '../add-quest-form/add-quest-form.component';
 
 @Component({
     selector: 'app-garden',

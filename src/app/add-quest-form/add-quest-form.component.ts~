@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-add-quest-form',
+  templateUrl: './add-quest-form.component.html',
+  styleUrls: ['./add-quest-form.component.css']
+})
+export class AddQuestFormComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

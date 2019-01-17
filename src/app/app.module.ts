@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,6 +21,7 @@ import { FloatingMapComponent } from './floating-map/floating-map.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { AddQuestFormComponent } from './add-quest-form/add-quest-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { ToastrModule } from 'ngx-toastr';
     NoProfileToastComponent,
     ButtonComponent,
     FloatingMapComponent,
+    AddQuestFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     CommonModule,
     ToastrModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
