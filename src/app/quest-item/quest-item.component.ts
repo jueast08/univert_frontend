@@ -23,14 +23,13 @@ export class QuestItemComponent implements OnInit {
 
   clickable= false;
 
-  XP: string = "100"
-
-
   @Input()
   member_icons: string = "../../assets/IconeQueteSeul.png";
 
   @Input()
   quest_icon: string = "../../assets/IconeOrangeTailler.png";
+
+  icon: string;
 
   constructor(public questService: QuestService, public connectedUserService: ConnectedUserService) { }
 
@@ -38,6 +37,25 @@ export class QuestItemComponent implements OnInit {
     if ( this.context === "garden" && this.type === "todo" ) {
         this.clickable = true;
     }
+
+    if (this.type === "current") {
+      this.icon = "IconeJaune";
+    } else if (this.type === "done") {
+      this.icon = "IconeVert";
+    } else {
+      this.icon = "IconeOrange";
+    }
+
+    if (this.quest.description === "arracher") {
+      this.icon+= "Arracher.png";
+    } else if (this.quest.description === "arroser") {
+      this.icon+= "Arroser.png";
+    } else if (this.quest.description === "semer") {
+      this.icon+= "Semer.png";
+    } else {
+      this.icon+= "Recolter.png";
+    }
+
   }
 
   onClick() {
