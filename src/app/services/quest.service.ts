@@ -8,12 +8,18 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ipserver } from './conf';
 
+export class ResService {
+	validate: boolean
+}
+
 @Injectable({
     providedIn: 'root'
 })
 export class QuestService {
 	
 	private urlForGarden = ipserver + "/univert/univert/questservice/garden/";
+	private urlForUser= ipserver + "/univert/univert/questservice/user/";
+	private urlTakeQuest = ipserver + "/univert/univert/questservice/quests/";
 
 	constructor(private http: HttpClient,
 		public connectedUserService : ConnectedUserService) { }
@@ -24,21 +30,16 @@ export class QuestService {
           );
     }
 
-      /*getQuestsForUser(id: string) : Observable<QuestList> {
-      return of(QUESTLIST);
-      }*/
+	getQuestsForUser(id: string) : Observable<QuestList> {
+		return this.http.get<QuestList>(this.urlForUser+id+"/quests").pipe(
+            tap(_ => console.log('quest list for garden fetched'))
+          );
+    }
 
-    takeQuest(id_quest: number, id_user: Number) {
-	// console.log("Quest : " + id_quest + ", user : "+id_user);
-	// var quest;
-	// for ( var i = 0 ; i < this.questList.toDo.length ; i++ ) {
-	//     if ( this.questList.toDo[i].id == id_quest ) {
-	// 	quest = this.questList.toDo[i];
-	// 	this.questList.toDo.splice(i, 1);
-	// 	this.questList.onGoing.push(quest);
-	//     }
-	// }
-	// this.connectedUserService.takeQuest(quest);
+    takeQuest(id_quest: number, id_user: Number): Observable<ResService> {
+		return this.http.post<ResService>(this.urlTakeQuest+id_quest+"/user/"+id_user, null).pipe(
+            tap(_ => console.log('quest list for garden fetched'))
+		  );
     }
 
     addQuest(quest: Quest) {
