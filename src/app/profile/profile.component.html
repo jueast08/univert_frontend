@@ -17,13 +17,13 @@
 
   <div class="profile-user-info">
     <div class="quitter profile-user-button-wrapper">
-      <app-button [text]="'Quitter'"></app-button>
+      <app-button [text]="'Quitter'" routerLink="/home"></app-button>
     </div>
     <div (click)="ngxSmartModalService.getModal('avatarModal').open()" class="profile-user-avatar-wrapper">
       <img src="../../assets/character1.png"/>
     </div>
     <div class="profile-user-button-wrapper">
-      <app-button [text]="'Voir le jardin'"></app-button>
+      <app-button [text]="'Voir le jardin'" routerLink="/jardin"></app-button>
     </div>
   </div>
 
