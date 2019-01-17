@@ -27,6 +27,7 @@
     "bootstrap": "^4.0.0",
     "core-js": "^2.5.4",
     "fs": "0.0.1-security",
+    "jquery": "^3.3.1",
     "nfc-pcsc": "^0.7.1",
     "ngx-socket-io": "^2.1.1",
     "rxjs": "~6.2.0",

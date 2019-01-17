@@ -4,6 +4,8 @@ import { QuestService } from '../services/quest.service';
 import { QuestList } from '../model/quest-list';
 
 import { QuestItemComponent } from '../quest-item/quest-item.component';
+import * as $ from 'jquery'
+
 
 @Component({
     selector: 'app-quest-list',
@@ -33,7 +35,19 @@ export class QuestListComponent implements OnInit {
     	this.done = this.questList.done;
     }
 
+    // onClickOpenList() {
+    //
+    //   console.log('here')
+    //
+    // }
+
     develop() {
+      let el = $(".quest-list-frame-inner");
+      if(!this.developped){
+        el.animate({height: 15});
+      }else{
+        el.animate({height: "100%"});
+      }
   	   this.developped = !this.developped;
     }
 
