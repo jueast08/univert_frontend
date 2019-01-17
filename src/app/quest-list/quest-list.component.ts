@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Quest } from '../model/quest';
-import { QuestService } from '../services/quest.service';
 import { QuestList } from '../model/quest-list';
 
 @Component({
@@ -10,22 +9,23 @@ import { QuestList } from '../model/quest-list';
 })
 export class QuestListComponent implements OnInit {
 
-    nbAvailableQuests = 3;
+    @Input()
+    questList: QuestList; 
+    
+    nbAvailableQuests = 0;
     developped = false;
 
     toDo: Quest[]
     onGoing: Quest[]
     done: Quest[]
 
-    questList: QuestList; 
-
-    constructor(public questService: QuestService) { }
+    constructor() { }
 
     ngOnInit() {
-	this.questService.getQuestsForGarden("1").subscribe(questList => this.questList = questList);
 	this.toDo = this.questList.toDo;
 	this.onGoing = this.questList.onGoing;
 	this.done = this.questList.done;
+	this.nbAvailableQuests = this.toDo.length
     }
 
     develop() {

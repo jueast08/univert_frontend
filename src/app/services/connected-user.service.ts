@@ -21,7 +21,12 @@ export class ConnectedUserService {
 	items: [{icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcucQzG-Trh4A11iJG4XP7W7IqibNkRNzWv80i66EO3XiRLsEi",
 		 name: "Pelle",
 		 description: "Pelle de jardinage de base, pour creuser des trous."
-        }]
+		}],
+	questList: { toDo : [{title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le serpent géant !", status:"A faire", icon:"../../assets/carrot_profile.png"}, {title : "Quête du serpent géant du lac de l'ombre", description: "Aller chasser le serpent géant !", status:"A faire", icon:"../../assets/carrot_profile.png"}],
+		     onGoing: [{title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png"}, {title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png"}, {title : "Planter des choux", description: "Aller planter des choux fleurs (et non romanesco)...", status:"En cours", icon:"../../assets/carrot_profile.png"}],
+		     done:
+		     [{title : "Arroser", description: "Arroser les plantes", status:"Fini", icon:"../../assets/carrot_profile.png"}]
+		   }
     }
     
 

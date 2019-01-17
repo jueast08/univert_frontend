@@ -5,6 +5,7 @@ import { ItemComponent } from '../item/item.component';
 import { ItemListComponent } from '../item-list/item-list.component';
 import { ConnectedUserService } from '../services/connected-user.service';
 import { Profile } from '../model/profile';
+import { QuestListComponent } from '../quest-list/quest-list.component';
 
 @Component({
     selector: 'app-profile',
