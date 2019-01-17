@@ -3,6 +3,7 @@ import { ButtonComponent } from '../button/button.component';
 import { FloatingMapComponent } from '../floating-map/floating-map.component';
 import { ConnectedUserService } from '../services/connected-user.service';
 import { ToastrManager } from 'ng6-toastr-notifications';
+import { NgxSmartModalService } from 'ngx-smart-modal';
 
 import io from "socket.io-client";
 
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
   private url = 'http://localhost:3000';
   private socket = null;
 
-  constructor(public toastr: ToastrManager, public connectedUserService : ConnectedUserService) {
+  constructor(public toastr: ToastrManager, public connectedUserService : ConnectedUserService, public ngxSmartModalService: NgxSmartModalService) {
   }
 
   ngOnInit() {
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit {
   }
 
   connectUserByPassword(){
-    this.toastr.warningToastr("Désolé. Mais c'est pour le V2 !", ':)'));
+    this.toastr.warningToastr("Désolé. Mais c'est pour le V2 !", ':)');
   }
 
 }

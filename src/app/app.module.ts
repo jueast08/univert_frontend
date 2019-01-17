@@ -21,6 +21,7 @@ import { AvatarCircleComponent } from './avatar-circle/avatar-circle.component';
 import { QuestItemComponent } from './quest-item/quest-item.component';
 import { ToastrModule } from 'ng6-toastr-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxSmartModalModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]

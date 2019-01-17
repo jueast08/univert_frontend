@@ -1,4 +1,49 @@
+.home-connection-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.home-connection-modal button {
+  background-color: rgba(248,147,44,1);
+  border: none;
+  color: #FFFFFF;
+  padding: 5px 5px;
+  width: 100%;
+  text-align: center;
+
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  margin-top: 10px;
+}
+
+.home-connection-modal a {
+  font-size: 12px;
+}
+
+.home-connection-modal label{
+  margin: 0;
+  text-align: left;
+  width: 100%;
+
+  color: #AAAAAA;
+  margin-top: 5px;
+}
+
+.home-connection-modal input[type=text]{
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  border: 1px solid #AAAAAA;
+  border-radius: 5px;
+
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+}
 
 .home-page-margins {
     width: 250px;
