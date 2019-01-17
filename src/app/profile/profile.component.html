@@ -26,6 +26,10 @@
       <app-button [text]="'Voir le jardin'" routerLink="/jardin"></app-button>
     </div>
   </div>
+  <div class="profile-name-and-xp">
+    <div class="profile-name">{{connectedUserService.userProfile.name}}</div>
+    <div class="profile-xp">XP : {{connectedUserService.userProfile.experience}}</div>
+  </div>
 
   <img (click)="ngxSmartModalService.getModal('myModal').open()" class="profile-add-quest" src="../../assets/Icone+.png"/>
 
