@@ -1,4 +1,54 @@
-<div class="profile">
+<div class="profile-frame">
+
+  <div class="profile-user-info">
+    <div class="profile-user-button-wrapper">
+      <app-button></app-button>
+    </div>
+    <div class="profile-user-avatar-wrapper">
+      <app-avatar-circle></app-avatar-circle>
+    </div>
+    <div class="profile-user-button-wrapper">
+      <app-button></app-button>
+    </div>
+  </div>
+
+  <div class="profile-content-section">
+    <div class="profile-content-section-half-circle"></div>
+    <div class="profile-content-section-inner">
+
+      <!-- Quest section -->
+      <div class="profile-content-section-quest-wrapper">
+        <div class="profile-content-section-xp-bar-wrapper">
+          <div class="profile-content-section-xp-bar-outer">
+            <div class="profile-content-section-xp-bar-inner">
+            </div>
+          </div>
+          <img src="../../assets/Etoile.png"/>
+        </div>
+        <div class="profile-content-section-my-quests">
+          <div class="profile-content-section-my-quests-button"></div>
+          <div class="profile-content-section-my-quests-frame orange-gradient">
+            <div class="profile-content-section-my-quests-inner-frame">
+              <div *ngIf="questList" class="profile-content-section-my-quests-inner-frame"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badge section -->
+      <div class="profile-content-section-badge-wrapper">
+        <span class="profile-content-section-badge-title">Mes Badges</span>
+        <div class="profile-content-section-badge-list">
+          <app-badge-list [badges]="userProfile.badges"></app-badge-list>
+          <app-badge></app-badge>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <img class="profile-add-quest" src="../../assets/Icone+.png"/>
+  <!-- </div>
   <app-profile-toast></app-profile-toast>
   <div class="itemList">
     <app-item-list [items]="userProfile.items"></app-item-list>
@@ -11,5 +61,5 @@
   </div>
   <div class="buttonToGarden" routerLink="/jardin">
     <app-button [text]="'Retour au jardin'"></app-button>
-  <div>
+  <div> -->
 </div>

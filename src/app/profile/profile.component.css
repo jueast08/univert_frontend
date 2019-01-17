@@ -1,4 +1,184 @@
-.profile {
+
+.profile-user-info{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-user-button-wrapper {
+  height: 50px;
+}
+.orange-gradient {
+  background: rgba(248,147,44,1);
+  background: -moz-linear-gradient(top, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,147,44,1)), color-stop(52%, rgba(248,147,44,1)), color-stop(100%, rgba(244,116,56,1)));
+  background: -webkit-linear-gradient(top, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
+  background: -o-linear-gradient(top, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
+  background: -ms-linear-gradient(top, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
+  background: linear-gradient(to bottom, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8932c', endColorstr='#f47438', GradientType=0 );
+}
+
+.profile-frame {
+  background-color: #b0d8b7;
+  height: 100vh;
+  width: 100%;
+
+
+  position: relative;
+  padding: 10px;
+}
+
+.profile-content-section{
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+
+    /* -moz-box-shadow: 0px -5px 0px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px -5px 0px 0px rgba(0,0,0,0.25); */
+    /* -moz-box-shadow: 0px -5px 0px 0px rgba(0,0,0,0.64);
+    box-shadow: 0px -5px 0px 0px rgba(0,0,0,0.64); */
+
+}
+
+.profile-content-section-half-circle{
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  background-color: #b0d8b7;
+
+  -webkit-box-shadow: 0px -5px 0px 0px #9fbfa2, inset 0px 3px 0px 0px #8ba68e;
+
+}
+
+.profile-content-section-inner{
+  width: 100%;
+  height: 100%;
+  margin-top: -100px;
+
+
+}
+
+.profile-content-section-quest-wrapper{
+  height: 200px;
+
+  display: flex;
+
+}
+.profile-content-section-my-quests{
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-content-section-my-quests-button {
+
+    background-color: #f9962b;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+    border: 5px solid #FFFFFF;
+    border-bottom: none; /*5px solid #f9962b;*/
+    width: 200px;
+    height: 30px;
+    z-index: 995;
+
+    margin-bottom: -5px;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile-content-section-my-quests-frame {
+  border-radius: 15px 15px;
+  background-color: #f9962b;
+  border: 5px solid #FFFFFF;
+
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  transition: height 0.8s linear;
+
+}
+
+.profile-content-section-my-quests-inner-frame {
+  background-color: #f7e5c9;
+  -webkit-box-shadow: inset 0px 3px 0px 1px rgba(226,212,186,1);
+  -moz-box-shadow: inset 0px 3px 0px 1px rgba(226,212,186,1);
+  box-shadow: inset 0px 3px 0px 1px rgba(226,212,186,1);
+
+  border-radius: 15px 15px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+
+}
+
+.profile-content-section-xp-bar-wrapper{
+  width: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.profile-content-section-xp-bar-wrapper img{
+  width: 100%;
+  margin-top: -30px;
+}
+
+.profile-content-section-xp-bar-outer, .profile-content-section-xp-bar-inner {
+  border-radius: 12px;
+  width: 25px;
+}
+
+.profile-content-section-xp-bar-outer {
+  height: 100%;
+  background: #9fbfa2;
+  display: flex;
+  align-items: flex-end;
+}
+
+.profile-content-section-xp-bar-inner {
+  height: 50%;
+  background: #8ba68e;
+}
+
+.profile-content-section-badge-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.profile-content-section-badge-title{
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-add-quest {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
 }
 
 .identity {
