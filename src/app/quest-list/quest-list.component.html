@@ -10,9 +10,9 @@
     <div class="quest-list-slider-content-frame">
       <div *ngIf="questList" class="quest-list-slider-content-inner-frame">
         <!-- <app-quest-item [member_icons]="'../../assets/IconeQuetePlusieurs+.png'"></app-quest-item> -->
-        <app-quest-item *ngFor="let quest of questList.todo" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item>
-        <app-quest-item *ngFor="let quest of questList.ongoing" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item>
-        <app-quest-item *ngFor="let quest of questList.done" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item>
+        <app-quest-item *ngFor="let quest of questList.todo" [quest]="quest" [context]="context" [type]="'todo'"></app-quest-item>
+        <app-quest-item *ngFor="let quest of questList.ongoing" [quest]="quest" [context]="context" [type]="'ongoing'"></app-quest-item>
+        <app-quest-item *ngFor="let quest of questList.done" [quest]="quest" [context]="context" [type]="'done'"></app-quest-item>
 
       </div>
   </div>

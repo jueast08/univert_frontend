@@ -37,7 +37,7 @@ export class QuestService {
     }
 
     takeQuest(id_quest: number, id_user: Number): Observable<ResService> {
-		return this.http.post<ResService>(this.urlQuest+id_quest+"/user/"+id_user, null).pipe(
+		return this.http.get<ResService>(this.urlQuest+id_quest+"/user/"+id_user).pipe(
             tap(_ => console.log('quest list for garden fetched'))
 		  );
     }
@@ -47,7 +47,7 @@ export class QuestService {
     }
 
     validQuest(id_quest: string) {
-        return this.http.post<ResService>(this.urlQuest+id_quest+"/done", null).pipe(
+        return this.http.get<ResService>(this.urlQuest+id_quest+"/done").pipe(
             tap(_ => console.log('quest list for garden fetched'))
 		  );
     }

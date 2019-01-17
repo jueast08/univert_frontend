@@ -38,30 +38,30 @@ export class QuestItemComponent implements OnInit {
         this.clickable = true;
     }
 
-    if (this.type === "current") {
+    if (this.type === "ongoing") {
       this.icon = "IconeJaune";
     } else if (this.type === "done") {
       this.icon = "IconeVert";
     } else {
       this.icon = "IconeOrange";
     }
-
-    if (this.quest.description === "arracher") {
-      this.icon+= "Arracher.png";
-    } else if (this.quest.description === "arroser") {
-      this.icon+= "Arroser.png";
-    } else if (this.quest.description === "semer") {
-      this.icon+= "Semer.png";
-    } else {
-      this.icon+= "Recolter.png";
-    }
+    this.icon+=this.quest.description + ".png";
+    // if (this.quest.description === "arracher") {
+    //   this.icon+= "Arracher.png";
+    // } else if (this.quest.description === "arroser") {
+    //   this.icon+= "Arroser.png";
+    // } else if (this.quest.description === "semer") {
+    //   this.icon+= "Semer.png";
+    // } else {
+    //   this.icon+= "Recolter.png";
+    // }
 
   }
 
   onClick() {
     if (this.quest && this.clickable && this.connectedUserService.userProfile) {
       console.log(this.quest);
-      this.questService.takeQuest(1, this.connectedUserService.userProfile.id).subscribe();
+      this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
     }
   }
 }
