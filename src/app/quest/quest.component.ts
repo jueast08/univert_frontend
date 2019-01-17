@@ -24,13 +24,18 @@ export class QuestComponent implements OnInit {
     constructor(public questService: QuestService, public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
-	if ( this.context === "garden" && this.type === "todo" ) {
+	if ( (this.context === "garden" && this.type === "todo") || (this.context === "profile" && this.type === "ongoing") ) {
 	    this.clickable= true;
 	}
     }
 
     onClick() {
-	this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id);
+	if ( this.context === "garden" ) {
+	    this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id);
+	}
+	if ( this.context === "profile" ) {
+	    this.questService.validQuest(this.quest.id);
+	}
     }
     
 }
