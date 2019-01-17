@@ -20,7 +20,7 @@ export class QuestService {
 
     getQuestsForGarden(id: string) : Observable<QuestList> {
 		return this.http.get<QuestList>(this.urlForGarden+id+"/quests").pipe(
-            tap(_ => console.log('connected'))
+            tap(_ => console.log('quest list for garden fetched'))
           );
     }
 
@@ -29,20 +29,20 @@ export class QuestService {
       }*/
 
     takeQuest(id_quest: number, id_user: Number) {
-	console.log("Quest : " + id_quest + ", user : "+id_user);
-	var quest;
-	for ( var i = 0 ; i < this.questList.toDo.length ; i++ ) {
-	    if ( this.questList.toDo[i].id == id_quest ) {
-		quest = this.questList.toDo[i];
-		this.questList.toDo.splice(i, 1);
-		this.questList.onGoing.push(quest);
-	    }
-	}
-	this.connectedUserService.takeQuest(quest);
+	// console.log("Quest : " + id_quest + ", user : "+id_user);
+	// var quest;
+	// for ( var i = 0 ; i < this.questList.toDo.length ; i++ ) {
+	//     if ( this.questList.toDo[i].id == id_quest ) {
+	// 	quest = this.questList.toDo[i];
+	// 	this.questList.toDo.splice(i, 1);
+	// 	this.questList.onGoing.push(quest);
+	//     }
+	// }
+	// this.connectedUserService.takeQuest(quest);
     }
 
     addQuest(quest: Quest) {
-	this.questList.toDo.push(quest);
+	// this.questList.toDo.push(quest);
     }
 
     validQuest(id_quest: string) {

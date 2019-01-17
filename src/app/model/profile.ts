@@ -5,10 +5,9 @@ import { QuestList } from "./quest-list";
 export class Profile {
     name: String;
     level: Number;
-    id: Number;
+    id: String;
     avatar: String;
     experience: Number;
     badges: Badge[];
     items: Item[];
-    questList: QuestList;
 }
