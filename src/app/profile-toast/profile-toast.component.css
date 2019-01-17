@@ -1,3 +1,21 @@
+.profile-user-avatar-wrapper{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 3px solid #FFFFFF;
+
+    background-color: #f7e5c9;
+    -webkit-box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+    -moz-box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+    box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+}
+
+.profile-user-avatar-wrapper img{
+  height:200px;
+  margin-left: -40px;
+}
+
 .avatar-frame {
     display: flex;
     justify-content: center;
