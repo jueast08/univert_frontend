@@ -1,4 +1,20 @@
-<div class="profile">
+<div class="profile-frame">
+  <div class="profile-content-section">
+    <div class="profile-content-section-half-circle"></div>
+    <div class="profile-content-section-inner">
+      <div class="profile-content-section-quest-wrapper">
+        <div class="profile-content-section-my-quests">
+          <div class="profile-content-section-my-quests-button"></div>
+          <div class="profile-content-section-my-quests-frame orange-gradient">
+            <div class="profile-content-section-my-quests-inner-frame">
+              <div *ngIf="questList" class="profile-content-section-my-quests-inner-frame"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div>
   <app-profile-toast></app-profile-toast>
   <div class="itemList">
     <app-item-list [items]="userProfile.items"></app-item-list>
@@ -11,5 +27,5 @@
   </div>
   <div class="buttonToGarden" routerLink="/jardin">
     <app-button [text]="'Retour au jardin'"></app-button>
-  <div>
+  <div> -->
 </div>

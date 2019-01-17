@@ -16,11 +16,11 @@ export class ProfileComponent implements OnInit {
 
     userProfile: Profile;
     context= "profile";
-    
+
     constructor(public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
-	this.userProfile = this.connectedUserService.userProfile;
+	     this.userProfile = this.connectedUserService.userProfile;
     }
 
 }
