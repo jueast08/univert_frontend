@@ -32,6 +32,6 @@
     <app-quest-list [title]="'Quêtes'" [questList]="questListService.currentList" [context]="context"></app-quest-list>
   </div>
 
-  <img (click)="ngxSmartModalService.getModal('myModal').open()" class="garden-add-quest" src="../../assets/Icone+.png"/>
+  <img (click)="addQuest()" class="garden-add-quest" src="../../assets/Icone+.png"/>
 
 <div>

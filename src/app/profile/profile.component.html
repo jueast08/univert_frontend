@@ -10,6 +10,12 @@
   <div class="avatar-image-container">
     <img src="../../assets/character1.png"/>
   </div>
+  <!-- <div class="avatar-stats">
+    <div class="avatar-health">
+      <img src="../../assets/heart.png"/>
+      <div class="avatar-stats-bar avatar-health-bar"></div>
+    </div>
+  </div> -->
     <!-- <button (click)="avatarModal.close()">Close</button> -->
 </ngx-smart-modal>
 
@@ -31,7 +37,7 @@
     <div class="profile-xp">XP : {{connectedUserService.userProfile.experience}}</div>
   </div>
 
-  <img (click)="ngxSmartModalService.getModal('myModal').open()" class="profile-add-quest" src="../../assets/Icone+.png"/>
+  <img (click)="addQuest()" class="profile-add-quest" src="../../assets/Icone+.png"/>
 
   <div class="profile-content-section">
     <div class="profile-content-section-half-circle"></div>

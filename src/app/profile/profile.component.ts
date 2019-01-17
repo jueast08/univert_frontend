@@ -15,6 +15,8 @@ import { QuestService } from '../services/quest.service';
 import { QuestListService } from '../services/quest-list.service';
 
 import { NgxSmartModalService } from 'ngx-smart-modal';
+import { ToastrService } from 'ngx-toastr';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Component({
     selector: 'app-profile',
@@ -28,7 +30,12 @@ export class ProfileComponent implements OnInit {
 
     questList: QuestList;
 
-    constructor(public connectedUserService: ConnectedUserService, public questService: QuestService, public questListService: QuestListService, public ngxSmartModalService: NgxSmartModalService) { }
+    constructor(
+      private toastr: ToastrManager,
+      public connectedUserService: ConnectedUserService,
+      public questService: QuestService, public questListService: QuestListService,
+      public ngxSmartModalService: NgxSmartModalService,
+    ) { }
 
     ngOnInit() {
          this.userProfile = this.connectedUserService.userProfile;
@@ -36,4 +43,7 @@ export class ProfileComponent implements OnInit {
         this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
     }
 
+    addQuest(){
+      this.toastr.infoToastr("Désolé. Mais se connecter avec un mot de passe est une fonctionnalité pour la V2 !", ':)');
+    }
 }

@@ -35,6 +35,8 @@ export class GardenComponent implements OnInit {
         this.nfcConnectionService.init();
     }
 
-
+    addQuest(){
+      this.toastr.infoToastr("Désolé. Mais se connecter avec un mot de passe est une fonctionnalité pour la V2 !", ':)');
+    }
 
 }

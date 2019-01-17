@@ -31,6 +31,6 @@ export class HomeComponent implements OnInit {
   }
 
   connectUserByPassword(){
-    this.toastr.warningToastr("Désolé. Mais c'est pour le V2 !", ':)');
+    this.toastr.infoToastr("Désolé. Mais se connecter avec un mot de passe est une fonctionnalité pour la V2 !", ':)');
   }
 }
