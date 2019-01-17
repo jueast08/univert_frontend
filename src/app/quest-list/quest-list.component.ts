@@ -26,13 +26,6 @@ export class QuestListComponent implements OnInit {
     nbAvailableQuests = 0;
     developped = false;
 
-    toDo: Quest[] = [];
-    onGoing: Quest[];
-    done: Quest[];
-
-    
-
-
 
     typeTodo= "todo";
     typeOngoing= "ongoing";
@@ -42,11 +35,9 @@ export class QuestListComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+        console.log("bou")
         if (this.questList) {
-            this.toDo = this.questList.todo;
-            this.onGoing = this.questList.ongoing;
-            this.done = this.questList.done;
-            this.nbAvailableQuests = this.toDo.length
+            this.nbAvailableQuests = this.questList.todo.length
         }
     }
 

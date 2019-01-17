@@ -8,31 +8,11 @@
     </div>
 
     <div class="quest-list-slider-content-frame">
-      <div class="quest-list-slider-content-inner-frame">
+      <div *ngIf="questList" class="quest-list-slider-content-inner-frame">
         <!-- <app-quest-item [member_icons]="'../../assets/IconeQuetePlusieurs+.png'"></app-quest-item> -->
-        <app-quest-item *ngFor="let quest of toDo" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item>
-        <!-- <app-quest-item *ngFor="let quest of onGoing" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item>
-        <app-quest-item *ngFor="let quest of done" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item> -->
+        <app-quest-item *ngFor="let quest of questList.todo" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item>
+        <app-quest-item *ngFor="let quest of questList.ongoing" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item>
+        <app-quest-item *ngFor="let quest of questList.done" [quest]="quest" [context]="context" [type]="typeTodo"></app-quest-item>
 
       </div>
   </div>
-
-
-
-
-
-<div class="hidde">
-  <div class="toDo" *ngIf="context!='profile'">
-    <app-quest *ngFor="let quest of toDo" [quest]="quest" [context]="context" [type]="typeTodo">{{quest}}</app-quest>
-    <h1>À faire</h1>
-  </div>
-  <div class="onGoing">
-    <h1>En cours</h1>
-    <app-quest *ngFor="let quest of onGoing" [quest]="quest" [context]="context" [type]="typeOngoing">{{quest}}</app-quest>
-  </div>
-  <div class="done">
-    <h1>Finies</h1>
-    <app-quest *ngFor="let quest of done" [quest]="quest" [context]="context" [type]="typeDone">{{quest}}</app-quest>
-  </div>
-
-</div>

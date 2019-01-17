@@ -14,14 +14,14 @@ import { AddQuestFormComponent } from '../add-quest-form/add-quest-form.componen
 export class GardenComponent implements OnInit {
 
     questList: QuestList;
-    context= "garden";
+    context = "garden";
 
     constructor(public questService: QuestService) { }
 
     ngOnInit() {
         this.questService.getQuestsForGarden("1").subscribe(list => {
             this.questList = list;
-            console.log(list);
+            console.log(this.questList)
         });
     }
 
