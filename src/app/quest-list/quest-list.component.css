@@ -4,7 +4,10 @@
   bottom: 0;
   height: calc(100vh - 50%);
   width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .quest-list-frame-inner {
@@ -33,13 +36,15 @@
     z-index: 995;
 
     margin-bottom: -5px;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
 }
 
 
 
 .quest-list-slider-content-frame {
-  /* position: absolute;
-  top: 30px; */
   border-top-left-radius: 15px 15px;
   border-top-right-radius: 15px 15px;
   background-color: #f9962b;
@@ -53,7 +58,7 @@
   height: 100%;
   padding: 5px;
   padding-bottom: 0%;
-  transition: all 0.5s ease-in-out;
+  transition: height 0.8s linear;
 
 }
 
@@ -72,5 +77,6 @@
 }
 
 .quest-list-frame-open  .quest-list-frame-inner{
-  transform: translateY(calc(100% - 24px));
+  height: 15px;
+  overflowY: hidden;
 }
