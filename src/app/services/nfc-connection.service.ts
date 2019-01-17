@@ -31,8 +31,8 @@ export class NfcConnectionService {
     this.connectedUserService.connect(id).subscribe(userId => {
       console.log(userId)
       if (userId.idUser != "0") {
-        this.router.navigate(['/jardin'])
         this.connectedUserService.connectUser(userId.idUser);
+        this.router.navigate(['/jardin']);
       }
     } );
   }

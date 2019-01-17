@@ -30,7 +30,7 @@ export class QuestComponent implements OnInit {
     }
 
     onClick() {
-	this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id);
+	// this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id);
     }
     
 }

@@ -26,6 +26,7 @@ export class QuestListComponent implements OnInit {
     onGoing: Quest[]
     done: Quest[]
 
+    
 
 
     @Input()
@@ -39,10 +40,12 @@ export class QuestListComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-	this.toDo = this.questList.todo;
-	this.onGoing = this.questList.ongoing;
-	this.done = this.questList.done;
-	this.nbAvailableQuests = this.toDo.length
+        if (this.questList) {
+            this.toDo = this.questList.todo;
+            this.onGoing = this.questList.ongoing;
+            this.done = this.questList.done;
+            this.nbAvailableQuests = this.toDo.length
+        }
     }
 
     develop() {
