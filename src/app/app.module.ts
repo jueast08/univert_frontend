@@ -17,6 +17,8 @@ import { QuestListComponent } from './quest-list/quest-list.component';
 import { NoProfileToastComponent } from './no-profile-toast/no-profile-toast.component';
 import { ButtonComponent } from './button/button.component';
 import { FloatingMapComponent } from './floating-map/floating-map.component';
+import { AvatarCircleComponent } from './avatar-circle/avatar-circle.component';
+import { QuestItemComponent } from './quest-item/quest-item.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { FloatingMapComponent } from './floating-map/floating-map.component';
     QuestListComponent,
     NoProfileToastComponent,
     ButtonComponent,
-    FloatingMapComponent
+    FloatingMapComponent,
+    AvatarCircleComponent,
+    QuestItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,18 @@
-<div id="garden-view">
-  <div id="garden-container">
-      <div  class="garden-page-margins" id="garden-profile-toast" routerLink="/profil">
+<div class="garden-view">
+  <div class="garden-container">
+      <div  class="garden-page-margins garden-profile-toast" routerLink="/profil">
           <app-profile-toast></app-profile-toast>
       </div>
 
-      <div class="garden-page-margins" id="garden-map-container">
-        <div id="garden-floating-map">
+      <div class="garden-page-margins garden-map-container">
+        <div class="garden-floating-map">
           <app-floating-map></app-floating-map>
         </div>
       </div>
   </div>
 
-  <div id="garden-quest-list-container">
-    <app-quest-list></app-quest-list>
+  <div class="garden-quest-list-container">
+    <app-quest-list [title]="'Quêtes'"></app-quest-list>
   </div>
 
 <div>

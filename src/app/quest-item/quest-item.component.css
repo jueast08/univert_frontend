@@ -1,0 +1,65 @@
+.quest-item {
+  border-bottom: 2px solid #e2d4ba;
+  height: 75px;
+  width: 100%;
+  padding: 2px 5px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quest-item .quest-item-icon {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+
+}
+
+.quest-item .quest-item-desc {
+  margin-left: 5px;
+  color: #999999;
+  font-weight: bold;
+
+  flex: 1 1 auto;
+}
+
+.quest-item .quest-item-xp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.quest-item .quest-item-xp>span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 50px;
+  color: #94d7f6;
+  font-weight: bold;
+  font-size: 25px;
+
+}
+.quest-item .quest-item-xp .quest-item-xp-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+.quest-item .quest-item-xp .quest-item-xp-img span{
+  color: #94d7f6;
+  font-weight: bold;
+  font-size: 20px;
+}
+.quest-item .quest-item-xp .quest-item-xp-img svg{
+  margin-top: -5px;
+  height: 30px;
+}

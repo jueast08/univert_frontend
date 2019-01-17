@@ -1,14 +1,23 @@
-<div class="quest-list-frame">
+<div class="quest-list-frame {{developped && 'quest-list-frame-open' }}">
+  <div class="quest-list-frame-inner">
     <div class="quest-list-slider-button" (click)="develop()">
       <!-- Quêtes ({{nbAvailableQuests}}) -->
-      <!-- <span *ngIf="developped">-</span>
-      <span *ngIf="!developped">+</span> -->
+      <span *ngIf="developped">{{ title }} - Ouvrir </span>
+      <span *ngIf="!developped">{{ title }} - Fermer </span>
     </div>
 
     <!-- <div class="quest-list-slider-content-frame" *ngIf="developped"> -->
     <div class="quest-list-slider-content-frame">
       <div class="quest-list-slider-content-inner-frame">
-        <div class="toDo">
+        <app-quest-item></app-quest-item>
+        <app-quest-item></app-quest-item>
+        <app-quest-item></app-quest-item>
+        <app-quest-item></app-quest-item>
+        <app-quest-item></app-quest-item>
+        <app-quest-item></app-quest-item>
+        <app-quest-item></app-quest-item>
+
+        <!-- <div class="toDo">
           <h1>À faire</h1>
           <app-quest *ngFor="let quest of toDo" [quest]="quest">{{quest}}</app-quest>
         </div>
@@ -19,10 +28,12 @@
         <div class="done">
           <h1>Finies</h1>
           <app-quest *ngFor="let quest of done" [quest]="quest">{{quest}}</app-quest>
-        </div>
+        </div> -->
       </div>
   </div>
 
 
+
+  </div>
 
 </div>

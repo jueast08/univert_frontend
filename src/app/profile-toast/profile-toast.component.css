@@ -6,49 +6,14 @@
 }
 
 .avatar-circle-frame {
-  padding: 0 5px;
-  margin-right: 0 5px;
-
-  display: flex;
+  /*
+  margin-right: 0 5px; */
+  padding: 5px;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-}
-.avatar-circle-frame .avatar-outer-circle {
-  background-color: #FFFFFF;
+  align-items: center; */
   height: 80px;
   width: 80px;
-  border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  -webkit-box-shadow: 3px 3px 0px 1px rgba(160,192,163,1);
-  -moz-box-shadow: 3px 3px 0px 1px rgba(160,192,163,1);
-  box-shadow: 3px 3px 0px 1px rgba(160,192,163,1);
-}
-
-.avatar-circle-frame .avatar-outer-circle .avatar-inner-circle {
-  height: 72px;
-  width: 72px;
-  border-radius: 50%;
-
-
-    background: rgba(249,146,43,1);
-    background: -moz-linear-gradient(top, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(249,146,43,1)), color-stop(100%, rgba(244,116,56,1)));
-    background: -webkit-linear-gradient(top, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
-    background: -o-linear-gradient(top, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
-    background: -ms-linear-gradient(top, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
-    background: linear-gradient(to bottom, rgba(249,146,43,1) 0%, rgba(244,116,56,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9922b', endColorstr='#f47438', GradientType=0 );
-
-
-    -webkit-box-shadow: inset 0px -5px 0px 0px #f05e36, 0px -2px 0px 0px rgba(253,175,61,1);
-    -moz-box-shadow: inset 0px -5px 0px 0px #f05e36, 0px -2px 0px 0px rgba(253,175,61,1);
-    box-shadow: inset 0px -5px 0px 0px #f05e36, 0px -2px 0px 0px rgba(253,175,61,1);
-
-
 }
 
 .avatar-info-frame {
