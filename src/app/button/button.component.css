@@ -30,7 +30,7 @@
 .button-wrapper button {
   all: unset;
   width: 80%;
-  max-height: 50%;
+  height: 60%;
 
   border-radius: 10px;
 
@@ -48,9 +48,9 @@
   background: linear-gradient(to bottom, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8932c', endColorstr='#f47438', GradientType=0 );
 
-  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(240,93,53,1),0px -2px 0px 0px rgba(253,175,61,1);
-  -moz-box-shadow: inset 0px -5px 0px 0px rgba(240,93,53,1),0px -2px 0px 0px rgba(253,175,61,1);
-  box-shadow: inset 0px -5px 0px 0px rgba(240,93,53,1),0px -2px 0px 0px rgba(253,175,61,1);
+  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(240,93,53,1),0px -2px 0px 0px rgba(253,175,61,1);
+  -moz-box-shadow: inset 0px -2px 0px 0px rgba(240,93,53,1),0px -2px 0px 0px rgba(253,175,61,1);
+  box-shadow: inset 0px -2px 0px 0px rgba(240,93,53,1),0px -2px 0px 0px rgba(253,175,61,1);
 
 }
 

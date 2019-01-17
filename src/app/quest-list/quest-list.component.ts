@@ -35,12 +35,6 @@ export class QuestListComponent implements OnInit {
     	this.done = this.questList.done;
     }
 
-    // onClickOpenList() {
-    //
-    //   console.log('here')
-    //
-    // }
-
     develop() {
       let el = $(".quest-list-frame-inner");
       if(!this.developped){
