@@ -12,6 +12,7 @@ export class QuestItemComponent implements OnInit {
 
   desc: string = "Description"
   XP: string = "100"
+  member_icons: string = "";
 
   constructor() { }
 
