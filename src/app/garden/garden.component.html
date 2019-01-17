@@ -29,7 +29,7 @@
 
   <app-add-quest-form></app-add-quest-form>
   <div class="garden-quest-list-container">
-    <app-quest-list [title]="'Quêtes'" [questList]="questList" [context]="context"></app-quest-list>
+    <app-quest-list [title]="'Quêtes'" [questList]="questListService.currentList" [context]="context"></app-quest-list>
   </div>
 
 <div>

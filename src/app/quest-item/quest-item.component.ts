@@ -4,6 +4,7 @@ import { AvatarCircleComponent } from '../avatar-circle/avatar-circle.component'
 import { Quest } from '../model/quest';
 import { QuestService } from '../services/quest.service';
 import { ConnectedUserService } from '../services/connected-user.service';
+import { QuestListService } from '../services/quest-list.service';
 
 @Component({
   selector: 'app-quest-item',
@@ -31,7 +32,7 @@ export class QuestItemComponent implements OnInit {
 
   icon: string;
 
-  constructor(public questService: QuestService, public connectedUserService: ConnectedUserService) { }
+  constructor(public questService: QuestService, public connectedUserService: ConnectedUserService, public questListService: QuestListService) { }
 
   ngOnInit() {
     if (this.type === "ongoing") {
@@ -59,11 +60,12 @@ export class QuestItemComponent implements OnInit {
       console.log(this.quest);
       if (this.context == "profile") {
         this.questService.validQuest(this.quest.id).subscribe();
+        this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
       }
       else {
         this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
+        this.questListService.refreshForGarden();
       }
-      
     }
   }
 }

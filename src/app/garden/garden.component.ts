@@ -5,6 +5,8 @@ import { QuestList } from '../model/quest-list';
 import { QuestService } from '../services/quest.service';
 import { AddQuestFormComponent } from '../add-quest-form/add-quest-form.component';
 import { NfcConnectionService } from '../services/nfc-connection.service';
+import { QuestListService } from '../services/quest-list.service';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
     selector: 'app-garden',
@@ -17,13 +19,11 @@ export class GardenComponent implements OnInit {
     context = "garden";
 
     constructor(public questService: QuestService,
+        public questListService: QuestListService,
         public nfcConnectionService: NfcConnectionService) { }
 
     ngOnInit() {
-        this.questService.getQuestsForGarden("1").subscribe(list => {
-            this.questList = list;
-            console.log(this.questList)
-        });
+        this.questListService.refreshForGarden();
         this.nfcConnectionService.init();
     }
 
