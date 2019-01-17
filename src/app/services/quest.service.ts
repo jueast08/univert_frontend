@@ -46,7 +46,7 @@ export class QuestService {
 	// this.questList.toDo.push(quest);
     }
 
-    validQuest(id_quest: string) {
+    validQuest(id_quest: Number) {
         return this.http.get<ResService>(this.urlQuest+id_quest+"/done").pipe(
             tap(_ => console.log('quest list for garden fetched'))
 		  );

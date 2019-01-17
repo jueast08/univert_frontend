@@ -34,10 +34,6 @@ export class QuestItemComponent implements OnInit {
   constructor(public questService: QuestService, public connectedUserService: ConnectedUserService) { }
 
   ngOnInit() {
-    if ( this.context === "garden" && this.type === "todo" ) {
-        this.clickable = true;
-    }
-
     if (this.type === "ongoing") {
       this.icon = "IconeJaune";
     } else if (this.type === "done") {
@@ -59,9 +55,15 @@ export class QuestItemComponent implements OnInit {
   }
 
   onClick() {
-    if (this.quest && this.clickable && this.connectedUserService.userProfile) {
+    if (this.quest && (this.type === "todo" || this.type==="ongoing" ) && this.connectedUserService.userProfile) {
       console.log(this.quest);
-      this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
+      if (this.context == "profile") {
+        this.questService.validQuest(this.quest.id).subscribe();
+      }
+      else {
+        this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
+      }
+      
     }
   }
 }
