@@ -1,4 +1,6 @@
 <div class="home-outer-container">
+  <div class="toast-frame"></div>
+
   <div class="home-page-margins home-logo-container">
     <img  src="../../assets/logo.png"/>
   </div>
@@ -18,7 +20,7 @@
     </div>
     <div class="home-button-group">
 
-      <div class="home-button">
+      <div class="home-button" (click)="connectUserByPassword()">
         <app-button [text]="'Se connecter'"></app-button>
       </div>
 

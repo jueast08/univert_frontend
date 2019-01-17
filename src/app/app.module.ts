@@ -19,6 +19,8 @@ import { ButtonComponent } from './button/button.component';
 import { FloatingMapComponent } from './floating-map/floating-map.component';
 import { AvatarCircleComponent } from './avatar-circle/avatar-circle.component';
 import { QuestItemComponent } from './quest-item/quest-item.component';
+import { ToastrModule } from 'ng6-toastr-notifications';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { QuestItemComponent } from './quest-item/quest-item.component';
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

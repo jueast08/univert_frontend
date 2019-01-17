@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { FloatingMapComponent } from '../floating-map/floating-map.component';
 import { ConnectedUserService } from '../services/connected-user.service';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 import io from "socket.io-client";
 
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
   private url = 'http://localhost:3000';
   private socket = null;
 
-  constructor(public connectedUserService : ConnectedUserService) {
+  constructor(public toastr: ToastrManager, public connectedUserService : ConnectedUserService) {
   }
 
   ngOnInit() {
@@ -26,6 +27,11 @@ export class HomeComponent implements OnInit {
       console.log(nfc_id);
       this.ConnectedUserService.connect(nfc_id);
     });
+
+  }
+
+  connectUserByPassword(){
+    this.toastr.warningToastr("Désolé. Mais c'est pour le V2 !", ':)'));
   }
 
 }
