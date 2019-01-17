@@ -1,8 +1,84 @@
-h3 {
-    background-color: #1D1D1D;
-    color: #FDFDFD;
-    padding: 10px 20px;
+
+.quest-list-frame {
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+  height: calc(100vh - 50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  opacity: 0.9;
+}
+
+.quest-list-frame-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+.quest-list-slider-button {
+
+    background-color: #f9962b;
     border-top-left-radius: 15px 15px;
     border-top-right-radius: 15px 15px;
-    margin: 0;
+    border: 5px solid #FFFFFF;
+    border-bottom: none; /*5px solid #f9962b;*/
+    width: 200px;
+    height: 30px;
+    z-index: 995;
+
+    margin-bottom: -5px;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.quest-list-slider-content-frame {
+  border-top-left-radius: 15px 15px;
+  border-top-right-radius: 15px 15px;
+  background-color: #f9962b;
+  border: 5px solid #FFFFFF;
+  border-bottom: none;
+
+  overflow-y: hidden;
+  width: 100%;
+
+
+  height: 100%;
+  padding: 5px;
+  padding-bottom: 0%;
+  transition: height 0.8s linear;
+
+}
+
+.quest-list-slider-content-frame .quest-list-slider-content-inner-frame {
+  background-color: #f7e5c9;
+  -webkit-box-shadow: inset 0px 3px 0px 1px rgba(226,212,186,1);
+  -moz-box-shadow: inset 0px 3px 0px 1px rgba(226,212,186,1);
+  box-shadow: inset 0px 3px 0px 1px rgba(226,212,186,1);
+
+  border-top-left-radius: 15px 15px;
+  border-top-right-radius: 15px 15px;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.quest-list-frame-open  .quest-list-frame-inner{
+  height: 15px;
+  overflowY: hidden;
 }

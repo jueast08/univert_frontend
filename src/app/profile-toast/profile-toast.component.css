@@ -1,21 +1,43 @@
-#avatar {
-    height: 65px;
-    width: 65px;
-    background-color: #FDFDFD;
-    border: #1D1D1D solid 2px;
-    border-radius: 50%;
-    float: left;
-    text-align: center;
+.avatar-frame {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
 }
 
-#avatar img{
-    height: 50px;
-}
-#ident {
-    padding-left: 10px;
+.avatar-circle-frame {
+  /*
+  margin-right: 0 5px; */
+  padding: 5px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 80px;
+  width: 80px;
 }
 
-h1 {
+.avatar-info-frame {
+    /* padding-left: 10px; */
+    margin-left: 5px;
+    padding-top: 10px;
+    color: #FFFFFF;
+
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.avatar-info-frame span {
+    display: block;
+    font-weight: bold;
+}
+
+.avatar-info-frame .avatar-profile-name{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* h1 {
     color: #1D1D1D;
     font-family: futura;
     padding-top: 10px;
@@ -24,9 +46,9 @@ h1 {
 }
 
 h2 {
-    font-size: 12px; 
+    font-size: 12px;
 }
 
 span {
     font-size: 10px;
-}
+} */

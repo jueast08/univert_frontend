@@ -1,12 +1,44 @@
-#garden {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #5c9fdd;
+.garden-view{
+  height: 100vh;
+  width: 100%;
+  background-color: #b3d9b7;
+  display: flex;
+  flex-direction: column;
+}
+.garden-page-margins {
+    /* width: 250px; */
 }
 
+.garden-container {
+    padding: 10px 5px 5px 5px;
+    box-sizing: border-box;
+}
 
-#map_garden {
+.garden-map-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.garden-floating-map {
+  margin: 0 5%;
+  width: 80%;
+  height: 40%;
+}
+.map_garden {
     width: 100%;
+}
+
+.garden-profile-toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.garden-quest-list-container{
+  height: 100%;
 }

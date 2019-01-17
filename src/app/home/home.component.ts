@@ -5,6 +5,8 @@ import { FloatingMapComponent } from '../floating-map/floating-map.component';
 import { ToastrService } from 'ngx-toastr';
 
 import { ConnectedUserService } from '../services/connected-user.service';
+import { ToastrManager } from 'ng6-toastr-notifications';
+import { NgxSmartModalService } from 'ngx-smart-modal';
 
 
 import io from "socket.io-client";
@@ -20,8 +22,7 @@ export class HomeComponent implements OnInit {
   private url = 'http://localhost:3000';
   private socket = null;
 
-
-  constructor(private toastr: ToastrService, public connectedUserService : ConnectedUserService) {
+  constructor(public toastr: ToastrManager, public connectedUserService : ConnectedUserService, public ngxSmartModalService: NgxSmartModalService) {
   }
 
   ngOnInit() {
@@ -29,11 +30,12 @@ export class HomeComponent implements OnInit {
     console.log('connected');
     this.socket.on('message', function(nfc_id){
       console.log(nfc_id);
-      this.connectedUserService.connect(nfc_id);
+      this.ConnectedUserService.connect(nfc_id);
     });
+
   }
 
-  openToaster() {
-    this.toastr.show('Cette fonctionnalité n\'est pas encore disponible', '');
+  connectUserByPassword(){
+    this.toastr.warningToastr("Désolé. Mais c'est pour le V2 !", ':)');
   }
 }

@@ -1,19 +1,70 @@
+.home-connection-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-connection-modal button {
+  background-color: rgba(248,147,44,1);
+  border: none;
+  color: #FFFFFF;
+  padding: 5px 5px;
+  width: 100%;
+  text-align: center;
+
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  margin-top: 10px;
+}
+
+.home-connection-modal .span-a {
+  font-size: 12px;
+  color: #007bff;
+}
+
+.home-connection-modal label{
+  margin: 0;
+  text-align: left;
+  width: 100%;
+
+  color: #AAAAAA;
+  margin-top: 5px;
+}
+
+.home-connection-modal input[type=text]{
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  border: 1px solid #AAAAAA;
+  border-radius: 5px;
+
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+
+  padding-left: 5px;
+  color: #777777;
+}
+
 .home-page-margins {
     width: 250px;
 }
 
-#home-logo-container{
+.home-logo-container{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#home-logo-container img{
+.home-logo-container img{
   width: 50px;
 }
 
-#home-outer-container {
+.home-outer-container {
   width: 100%;
   height: 100vh;
   background: #b3d9b7; /*background color*/
@@ -24,13 +75,13 @@
   flex-direction: column;
 }
 
-#home-title-banner {
+.home-title-banner {
   height: 100px;
   text-align: center;
   font-weight: bold;
 }
 
-#home-title-banner span{
+.home-title-banner span{
   width: 100%;
   text-align: center;
   color: white;
@@ -38,7 +89,7 @@
 
 }
 
-#home-floating-map {
+.home-floating-map {
   margin: 0 5%;
   width: 80%;
   height: 40%;
@@ -53,7 +104,7 @@
 
 }
 
-.home-page-container #home-subtitle{
+.home-page-container .home-subtitle{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,12 +112,12 @@
   color: #FFFFFF;
 }
 
-.home-page-container #home-subtitle {
+.home-page-container .home-subtitle {
   font-weight: bold;
   font-size: 20px;
 }
 
-.home-page-container #home-button-group {
+.home-page-container .home-button-group {
   display: flex;
   flex-direction: column;
   justify-content: center;

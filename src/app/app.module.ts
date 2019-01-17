@@ -17,9 +17,14 @@ import { QuestListComponent } from './quest-list/quest-list.component';
 import { NoProfileToastComponent } from './no-profile-toast/no-profile-toast.component';
 import { ButtonComponent } from './button/button.component';
 import { FloatingMapComponent } from './floating-map/floating-map.component';
+
 import { CommonModule } from '@angular/common';
+import { AvatarCircleComponent } from './avatar-circle/avatar-circle.component';
+import { QuestItemComponent } from './quest-item/quest-item.component';
+import { ToastrModule } from 'ng6-toastr-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +42,8 @@ import { ToastrModule } from 'ngx-toastr';
     NoProfileToastComponent,
     ButtonComponent,
     FloatingMapComponent,
+    AvatarCircleComponent,
+    QuestItemComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +52,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     CommonModule,
     ToastrModule.forRoot(),
+    NgxSmartModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
