@@ -46,10 +46,10 @@
           <div class="profile-content-section-my-quests-button"></div>
           <div class="profile-content-section-my-quests-frame orange-gradient">
             <div class="profile-content-section-my-quests-inner-frame">
-              <div *ngIf="questList" class="profile-content-section-my-quests-inner-frame">
-                <app-quest-item *ngFor="let quest of questList.todo" [quest]="quest" [context]="context" [type]="'todo'"></app-quest-item>
-                <app-quest-item *ngFor="let quest of questList.ongoing" [quest]="quest" [context]="context" [type]="'ongoing'"></app-quest-item>
-                <app-quest-item *ngFor="let quest of questList.done" [quest]="quest" [context]="context" [type]="'done'"></app-quest-item>
+              <div *ngIf="questListService.currentList" class="profile-content-section-my-quests-inner-frame">
+                <app-quest-item *ngFor="let quest of questListService.currentList.todo" [quest]="quest" [context]="context" [type]="'todo'"></app-quest-item>
+                <app-quest-item *ngFor="let quest of questListService.currentList.ongoing" [quest]="quest" [context]="context" [type]="'ongoing'"></app-quest-item>
+                <app-quest-item *ngFor="let quest of questListService.currentList.done" [quest]="quest" [context]="context" [type]="'done'"></app-quest-item>
               </div>
             </div>
           </div>

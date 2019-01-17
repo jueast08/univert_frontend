@@ -12,6 +12,7 @@ import { ButtonComponent } from '../button/button.component';
 import { AvatarCircleComponent } from '../avatar-circle/avatar-circle.component';
 import { QuestList } from '../model/quest-list';
 import { QuestService } from '../services/quest.service';
+import { QuestListService } from '../services/quest-list.service';
 
 import { NgxSmartModalService } from 'ngx-smart-modal';
 
@@ -27,14 +28,12 @@ export class ProfileComponent implements OnInit {
 
     questList: QuestList;
 
-    constructor(public connectedUserService: ConnectedUserService,
-      public questService: QuestService,
-    public ngxSmartModalService: NgxSmartModalService) { }
+    constructor(public connectedUserService: ConnectedUserService, public questService: QuestService, public questListService: QuestListService, public ngxSmartModalService: NgxSmartModalService) { }
 
     ngOnInit() {
          this.userProfile = this.connectedUserService.userProfile;
          console.log(this.connectedUserService.userProfile);
-        this.questService.getQuestsForUser(this.connectedUserService.userProfile.id).subscribe(list => this.questList = list);
+        this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
     }
 
 }
