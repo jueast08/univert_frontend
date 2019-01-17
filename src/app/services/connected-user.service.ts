@@ -36,9 +36,4 @@ export class ConnectedUserService {
             this.userProfile = userProfile;
         });
     }
-
-    takeQuest(quest: Quest) {
-	 //this.userProfile.questList.onGoing.push(quest);
-    }
-
 }
