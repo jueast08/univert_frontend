@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Quest } from '../model/quest';
 import { QuestList } from '../model/quest-list';
 
+
 import { QuestItemComponent } from '../quest-item/quest-item.component';
 import * as $ from 'jquery'
 
@@ -18,7 +19,7 @@ export class QuestListComponent implements OnInit {
 
     @Input()
     context: String;
-    
+
     nbAvailableQuests = 0;
     developped = false;
 
@@ -39,10 +40,11 @@ export class QuestListComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-	this.toDo = this.questList.toDo;
-	this.onGoing = this.questList.onGoing;
-	this.done = this.questList.done;
-	this.nbAvailableQuests = this.toDo.length
+    	this.toDo = this.questList.toDo;
+    	this.onGoing = this.questList.onGoing;
+    	this.done = this.questList.done;
+    	this.nbAvailableQuests = this.toDo.length
+
     }
 
     develop() {

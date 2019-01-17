@@ -1,5 +1,5 @@
 
-<div class="quest-list-frame">
+<div class="quest-list-frame" (load)="this.ngxSmartModalService.getModal('addQuestModal').open()">
   <div class="quest-list-frame-inner">
     <div class="quest-list-slider-button" (click)="develop()">
       <!-- Quêtes ({{nbAvailableQuests}}) -->

@@ -19,7 +19,7 @@ import { NfcConnectionService } from '../services/nfc-connection.service';
 
 export class HomeComponent implements OnInit {
 
-  constructor(private toastr: ToastrManager, 
+  constructor(private toastr: ToastrManager,
     public connectedUserService : ConnectedUserService,
     public nfcConnectionService: NfcConnectionService,
     public ngxSmartModalService: NgxSmartModalService) {
