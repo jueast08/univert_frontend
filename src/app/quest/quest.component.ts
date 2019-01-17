@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Quest } from '../model/quest';
 import { QuestService } from '../services/quest.service';
+import { ConnectedUserService } from '../services/connected-user.service';
 
 @Component({
     selector: 'app-quest',
@@ -20,7 +21,7 @@ export class QuestComponent implements OnInit {
 
     clickable= false;
 
-    constructor(public questService: QuestService) { }
+    constructor(public questService: QuestService, public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
 	if ( this.context === "garden" && this.type === "todo" ) {
@@ -29,7 +30,7 @@ export class QuestComponent implements OnInit {
     }
 
     onClick() {
-	this.questService.takeQuest(this.quest.id, "1");
+	this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id);
     }
     
 }

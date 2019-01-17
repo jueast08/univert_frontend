@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Quest } from '../model/quest';
 import { QuestList } from '../model/quest-list';
 import { Observable, of } from 'rxjs';
+import { ConnectedUserService } from '../services/connected-user.service';
 
 @Injectable({
     providedIn: 'root'
@@ -15,7 +16,7 @@ export class QuestService {
 			      [{title : "Arroser", description: "Arroser les plantes", status:"Fini", icon:"../../assets/carrot_profile.png", id:6}]
 			    };
     
-    constructor() { }
+    constructor(public connectedUserService : ConnectedUserService) { }
 /*
     getQuestsForGarden(id: string) : Observable<QuestList> {
 	return of(QUESTLIST);
@@ -25,19 +26,20 @@ export class QuestService {
 	return of(QUESTLIST);
     }*/
 
-    takeQuest(id_quest: number, id_user: string) {
-	console.log(id_quest);
+    takeQuest(id_quest: number, id_user: Number) {
+	console.log("Quest : " + id_quest + ", user : "+id_user);
+	var quest;
 	for ( var i = 0 ; i < this.questList.toDo.length ; i++ ) {
 	    if ( this.questList.toDo[i].id == id_quest ) {
-		var tmp = this.questList.toDo[i];
+		quest = this.questList.toDo[i];
 		this.questList.toDo.splice(i, 1);
-		this.questList.onGoing.push(tmp);
+		this.questList.onGoing.push(quest);
 	    }
 	}
+	this.connectedUserService.takeQuest(quest);
     }
 
     validQuest(id_quest: string) {
         
     }
-
 }

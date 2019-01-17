@@ -1,11 +1,11 @@
 <h3 (click)="develop()">
-  Quêtes ({{nbAvailableQuests}})
+  Quêtes <span *ngIf="context!='profile'">({{nbAvailableQuests}})</span>
   <span *ngIf="developped">-</span>
   <span *ngIf="!developped">+</span>
 </h3>
 
 <div *ngIf="developped">
-  <div class="toDo">
+  <div class="toDo" *ngIf="context!='profile'">
     <h1>À faire</h1>
     <app-quest *ngFor="let quest of toDo" [quest]="quest" [context]="context" [type]="typeTodo">{{quest}}</app-quest>
   </div>
