@@ -1,3 +1,14 @@
+.avatar-image-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-image-container img{
+  height: 75%;
+}
 
 .profile-user-info{
   display: flex;
@@ -8,8 +19,29 @@
 }
 
 .profile-user-button-wrapper {
-  height: 50px;
+  height: 40px;
+  width: 100px;
+  flex: 1 1 auto;
 }
+
+.profile-user-avatar-wrapper{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 3px solid #FFFFFF;
+
+    background-color: #f7e5c9;
+    -webkit-box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+    -moz-box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+    box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+}
+
+.profile-user-avatar-wrapper img{
+  height:200px;
+  margin-left: -40px;
+}
+
 .orange-gradient {
   background: rgba(248,147,44,1);
   background: -moz-linear-gradient(top, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
