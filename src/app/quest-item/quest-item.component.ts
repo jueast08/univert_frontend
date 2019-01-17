@@ -42,7 +42,9 @@ export class QuestItemComponent implements OnInit {
   }
 
   onClick() {
-    this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id);
+    if (this.quest && this.clickable && this.connectedUserService.userProfile) {
+      console.log(this.quest);
+      this.questService.takeQuest(1, this.connectedUserService.userProfile.id)
+    }
   }
-
 }
