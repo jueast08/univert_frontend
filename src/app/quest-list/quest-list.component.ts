@@ -20,17 +20,18 @@ export class QuestListComponent implements OnInit {
     @Input()
     context: String;
 
+    @Input()
+    title: string = "Quests";
+
     nbAvailableQuests = 0;
     developped = false;
 
-    toDo: Quest[]
-    onGoing: Quest[]
-    done: Quest[]
+    toDo: Quest[] = [];
+    onGoing: Quest[];
+    done: Quest[];
 
 
 
-    @Input()
-    title: string = "Quests";
 
     typeTodo= "todo";
     typeOngoing= "ongoing";
