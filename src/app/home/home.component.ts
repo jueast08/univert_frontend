@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { FloatingMapComponent } from '../floating-map/floating-map.component';
 
-import { ToastrService } from 'ngx-toastr';
 
 import { ConnectedUserService } from '../services/connected-user.service';
+import { NfcConnectionService } from '../services/nfc-connection.service';
+
+import { ToastrService } from 'ngx-toastr';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { NgxSmartModalService } from 'ngx-smart-modal';
-import { NfcConnectionService } from '../services/nfc-connection.service';
 
 
 @Component({

@@ -1,20 +1,19 @@
-<!-- <ngx-smart-modal #myModal identifier="myModal">
-  <div class="home-connection-modal">
-    <span>Se connecter</span>
-    <label for="username">Username</label>
-    <input id="username" type="text"/>
-    <label for="password">Password</label>
-    <input id="password" type="text"/>
-
-    <button (click)="myModal.close(); connectUserByPassword()">Je me connecte !</button>
-    <div>
-      <span class="span-a" (click)="myModal.close(); connectUserByPassword()">Créer un compte</span>
-    </div>
+<ngx-smart-modal #myModal identifier="myModal">
+  <div class="addQuestForm">
+      <label for="title">Titre se la quête </label>
+      <input id="title" type="text" [formControl]="title" class="add-quest-input"/>
+      <label for="description">Description se la quête</label>
+      <input id="description" type="text" [formControl]="description" class="add-quest-input"/>
+      <label for="icon">Icone se la quête (DEV)</label>
+      <input id="icon" type="text" [formControl]="icon" class="add-quest-input">
+      <label id="id">Identifiant se la quête (DEV) :</label>
+      <input id="id" type="number" [formControl]="id" class="add-quest-input">
+      <button class="submitButton" (click)="submitQuest()">Soumettre quête</button>
   </div>
-</ngx-smart-modal> -->
-
+</ngx-smart-modal>
 
 <div class="garden-view">
+
   <div class="garden-container">
       <div  class="garden-page-margins garden-profile-toast" routerLink="/profil">
           <app-profile-toast></app-profile-toast>
@@ -27,9 +26,12 @@
       </div>
   </div>
 
-  <app-add-quest-form></app-add-quest-form>
+  <!-- <app-add-quest-form></app-add-quest-form> -->
+
   <div class="garden-quest-list-container">
     <app-quest-list [title]="'Quêtes'" [questList]="questList" [context]="context"></app-quest-list>
   </div>
+
+  <img (click)="ngxSmartModalService.getModal('myModal').open()" class="garden-add-quest" src="../../assets/Icone+.png"/>
 
 <div>
