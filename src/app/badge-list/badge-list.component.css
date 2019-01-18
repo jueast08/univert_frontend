@@ -1,13 +1,13 @@
 .badge-list-frame{
+  height: 100%;
 
 }
 
 .badge-list-content {
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
   justify-content: center;
-  height: 100%;
+
 }
 
 
