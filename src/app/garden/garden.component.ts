@@ -39,7 +39,10 @@ export class GardenComponent implements OnInit {
     }
 
     addQuest(){
-      this.toastr.infoToastr("Désolé. Mais se connecter avec un mot de passe est une fonctionnalité pour la V2 !", ':)');
+      this.toastr.infoToastr("Désolé, mais proposer une quête est une fonctionnalité pour la V2 ! ", ':)');
     }
 
+    connectUserByPassword(){
+      this.toastr.infoToastr("Désolé, mais se connecter avec un mot de passe est une fonctionnalité pour la V2 ! Essayez avec un badge NFC ! ", ':)');
+    }
 }

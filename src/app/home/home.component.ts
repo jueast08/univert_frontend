@@ -31,6 +31,6 @@ export class HomeComponent implements OnInit {
   }
 
   connectUserByPassword(){
-    this.toastr.infoToastr("Désolé. Mais se connecter avec un mot de passe est une fonctionnalité pour la V2 !", ':)');
+    this.toastr.infoToastr("Désolé, mais se connecter avec un mot de passe est une fonctionnalité pour la V2 ! Essayez avec un badge NFC ! ", ':)');
   }
 }

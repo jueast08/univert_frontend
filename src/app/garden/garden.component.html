@@ -5,6 +5,20 @@
   </div>
 </ngx-smart-modal>
 
+<ngx-smart-modal #connect identifier="connect">
+  <div class="home-connection-modal">
+    <span>Se connecter</span>
+    <label for="username">Username</label>
+    <input id="username" type="text"/>
+    <label for="password">Password</label>
+    <input id="password" type="text"/>
+
+    <button (click)="connect.close(); connectUserByPassword()">Je me connecte !</button>
+    <div>
+      <span class="span-a" (click)="connect.close(); connectUserByPassword()">Créer un compte</span>
+    </div>
+  </div>
+</ngx-smart-modal>
 
 <div class="garden-view">
 
@@ -24,7 +38,8 @@
           </div>
         </div>
         <div class="profile-user-button-wrapper">
-          <app-button [text]="'Voir profile'" routerLink="/profil"></app-button>
+          <app-button  *ngIf="this.connectedUserService.userProfile" [text]="'Voir profile'" routerLink="/profil"></app-button>
+          <app-button  *ngIf="!this.connectedUserService.userProfile" [text]="'Se connecter'" (click)="ngxSmartModalService.getModal('connect').open()"></app-button>
         </div>
       </div>
       <div class="profile-name-and-xp">

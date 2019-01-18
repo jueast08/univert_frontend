@@ -38,7 +38,7 @@
   color: #FFFFFF;
   font-weight: bold;
   text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
-  
+
   background: rgba(248,147,44,1);
   background: -moz-linear-gradient(top, rgba(248,147,44,1) 0%, rgba(248,147,44,1) 52%, rgba(244,116,56,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,147,44,1)), color-stop(52%, rgba(248,147,44,1)), color-stop(100%, rgba(244,116,56,1)));
