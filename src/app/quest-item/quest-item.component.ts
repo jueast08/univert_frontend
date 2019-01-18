@@ -6,6 +6,9 @@ import { QuestService } from '../services/quest.service';
 import { ConnectedUserService } from '../services/connected-user.service';
 import { QuestListService } from '../services/quest-list.service';
 
+import { ToastrService } from 'ngx-toastr';
+import { ToastrManager } from 'ng6-toastr-notifications';
+
 @Component({
   selector: 'app-quest-item',
   templateUrl: './quest-item.component.html',
@@ -32,7 +35,7 @@ export class QuestItemComponent implements OnInit {
 
   icon: string;
 
-  constructor(public questService: QuestService, public connectedUserService: ConnectedUserService, public questListService: QuestListService) { }
+  constructor(  private toastr: ToastrManager,public questService: QuestService, public connectedUserService: ConnectedUserService, public questListService: QuestListService) { }
 
   ngOnInit() {
     if (this.type === "ongoing") {
@@ -61,11 +64,15 @@ export class QuestItemComponent implements OnInit {
       if (this.context == "profile") {
         this.questService.validQuest(this.quest.id).subscribe();
         this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
+        this.toastr.successToastr("Tu as réussi la quête et as gagné "+this.quest.experience+" XP", 'Ouais !');
       }
       else {
         this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
         this.questListService.refreshForGarden();
+        this.toastr.successToastr("La quête t'a été attribuée", 'Succès');
       }
+    }else{
+      this.toastr.infoToastr("Connecte-toi pour choisir ou valider une quête", 'Pas connecté ?');
     }
   }
 }
