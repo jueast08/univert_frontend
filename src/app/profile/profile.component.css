@@ -22,7 +22,48 @@
 .avatar-image-container img{
   height: 75%;
 }
+
+.item-frame {
+  /* background-color: #b0d8b7; */
+}
+
+.item-header {
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+  color: #999999;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.item-frame-inner {
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.item-container {
+  height: 75px;
+  width: 75px;
+  overflow: hidden;
+  border-radius: 100%;
+  /* border: 3px solid #999999; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+
+  background-color: #f7e5c9;
+  -webkit-box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+  -moz-box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+  box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+}
 /*
+
 .avatar-stats{
   display: flex;
   flex-direction: column;
