@@ -16,6 +16,11 @@
   margin-left: -40px;
 }
 
+.profile-user-avatar-wrapper .profile-user-avatar-2 {
+    margin-left: -20px;
+    margin-top: 10px;
+}
+
 .avatar-frame {
     display: flex;
     justify-content: center;

@@ -9,9 +9,14 @@ import { Profile } from '../model/profile';
 })
 export class ProfileToastComponent implements OnInit {
 
+    avatar: string = "character1.png";
+
     constructor(public connectedUserService: ConnectedUserService) { }
 
     ngOnInit() {
+        if (this.connectedUserService.userProfile && this.connectedUserService.userProfile.id == 2) {
+            this.avatar = "character1.png";
+        }
     }
 
 }
