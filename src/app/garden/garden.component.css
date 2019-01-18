@@ -1,3 +1,63 @@
+.profile-user-info-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.profile-name-and-xp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-name-and-xp div{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.profile-user-info{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.profile-user-button-wrapper {
+  height: 40px;
+  width: 100px;
+  flex: 1 1 auto;
+}
+
+.avatar-place-holder {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+
+.profile-user-avatar-wrapper{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 3px solid #FFFFFF;
+
+    background-color: #f7e5c9;
+    -webkit-box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+    -moz-box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+    box-shadow: 2px 5px 0px 0px rgba(0,0,0,0.1), inset 0px 2px 0px 0px rgba(0,0,0,0.64);
+}
+
+.profile-user-avatar-wrapper img{
+  height:200px;
+  margin-left: -40px;
+}
+
 .garden-view{
   height: 100vh;
   width: 100% !important;

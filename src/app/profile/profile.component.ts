@@ -40,7 +40,7 @@ export class ProfileComponent implements OnInit {
     ngOnInit() {
          this.userProfile = this.connectedUserService.userProfile;
          console.log(this.connectedUserService.userProfile);
-        this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
+         this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
     }
 
     addQuest(){

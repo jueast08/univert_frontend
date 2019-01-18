@@ -20,6 +20,8 @@ export class NfcConnectionService {
     this.socket = io.connect(this.url);
     console.log('connected');
     let self = this;
+    //@TODO remove
+    this.connect("044463b2744d80")
     this.socket.on('message', function(nfc_id){
       console.log(nfc_id);
       self.connect(nfc_id);

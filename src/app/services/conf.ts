@@ -1,1 +1,1 @@
-export let ipserver = "http://192.168.43.32:8080";
+export let ipserver = "http://localhost:8080";

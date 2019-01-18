@@ -8,6 +8,7 @@ import { NfcConnectionService } from '../services/nfc-connection.service';
 import { QuestListService } from '../services/quest-list.service';
 import { ThrowStmt } from '@angular/compiler';
 
+import { ConnectedUserService } from '../services/connected-user.service';
 
 import { ToastrService } from 'ngx-toastr';
 import { ToastrManager } from 'ng6-toastr-notifications';
@@ -29,6 +30,7 @@ export class GardenComponent implements OnInit {
         public questService: QuestService,
         public ngxSmartModalService: NgxSmartModalService,
         public questListService: QuestListService,
+        public connectedUserService: ConnectedUserService,
         public nfcConnectionService: NfcConnectionService) { }
 
     ngOnInit() {
