@@ -12,6 +12,7 @@ import { ThrowStmt } from '@angular/compiler';
 import { ToastrService } from 'ngx-toastr';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { NgxSmartModalService } from 'ngx-smart-modal';
+import { QuestItemComponent } from '../quest-item/quest-item.component';
 
 @Component({
     selector: 'app-garden',
