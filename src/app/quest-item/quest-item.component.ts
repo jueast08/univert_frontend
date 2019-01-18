@@ -64,13 +64,8 @@ export class QuestItemComponent implements OnInit {
       return;
     }
 
-    if(this.quest && (this.type === "done")){
-      this.toastr.errorToastr("Cette quête a déjà été faite", 'Trop tard !');
-      return;
-    }
-
-    if(this.quest && (this.type === "ongoing")){
-      this.toastr.errorToastr("Vous pouvez pas rejoindre cette quête. Elle est déjà en cours !", 'Trop tard !');
+    if(this.quest && (this.type === "ongoing") && this.context !== "profile"){
+      this.toastr.errorToastr("Vous pouvez pas rejoindre cette quête. Elle est déjà en cours ! Si vous faites partie de cette quête, vous pouvez la valider dans votre profile", 'Trop tard !');
       return;
     }
 
@@ -85,6 +80,16 @@ export class QuestItemComponent implements OnInit {
         this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
         this.questListService.refreshForGarden();
         this.toastr.successToastr("La quête vous a été attribuée", 'Succès');
+      }
+    }else{
+      if(this.quest && (this.type === "done")){
+        this.toastr.errorToastr("Cette quête a déjà été faite", 'Trop tard !');
+        return;
+      }
+
+      if(this.quest && (this.type === "ongoing")){
+        this.toastr.errorToastr("Vous pouvez pas rejoindre cette quête. Elle est déjà en cours !", 'Trop tard !');
+        return;
       }
     }
   }
