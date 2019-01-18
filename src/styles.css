@@ -3,9 +3,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~ngx-smart-modal/ngx-smart-modal.css";
 /* @import "app/app.component"; */
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #b3d9b7 !important; /*background color*/
+
+}
 
 *{
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   -webkit-transition:all 0.5s linear;
   -moz-transition:all 0.5s linear;
   -o-transition:all 0.5s linear;

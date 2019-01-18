@@ -17,6 +17,7 @@
   opacity: 0.9;
 }
 
+
 .quest-list-frame-inner {
   position: relative;
 
@@ -94,4 +95,11 @@
 .quest-list-frame-open  .quest-list-frame-inner{
   height: 15px;
   overflowY: hidden;
+}
+
+@media only screen and (min-width: 800px) {
+  .quest-list-frame{
+    height: 100%;
+    
+  }
 }

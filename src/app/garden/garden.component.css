@@ -1,6 +1,6 @@
 .garden-view{
   height: 100vh;
-  width: 100%;
+  width: 100% !important;
   background-color: #b3d9b7;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@
 .garden-container {
     padding: 10px 5px 5px 5px;
     box-sizing: border-box;
+
 }
 
 .garden-map-container {
@@ -43,6 +44,8 @@
 
 .garden-quest-list-container{
   height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .garden-add-quest {
