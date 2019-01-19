@@ -59,20 +59,36 @@ export class QuestItemComponent implements OnInit {
   }
 
   onClick() {
+    if(!this.connectedUserService.userProfile){
+      this.toastr.errorToastr("Connectez-vous pour choisir ou valider une quête", 'Pas connecté ?');
+      return;
+    }
+
+    if(this.quest && (this.type === "ongoing") && this.context !== "profile"){
+      this.toastr.errorToastr("Vous pouvez pas rejoindre cette quête. Elle est déjà en cours ! Si vous faites partie de cette quête, vous pouvez la valider dans votre profile", 'Trop tard !');
+      return;
+    }
+
     if (this.quest && (this.type === "todo" || this.type==="ongoing" ) && this.connectedUserService.userProfile) {
       console.log(this.quest);
       if (this.context == "profile") {
-        this.questService.validQuest(this.quest.id).subscribe();
+        this.questService.validQuest(this.quest.id, this.quest.experience).subscribe();
         this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
-        this.toastr.successToastr("Tu as réussi la quête et as gagné "+this.quest.experience+" XP", 'Ouais !');
       }
       else {
         this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
         this.questListService.refreshForGarden();
-        this.toastr.successToastr("La quête t'a été attribuée", 'Succès');
       }
     }else{
-      this.toastr.infoToastr("Connecte-toi pour choisir ou valider une quête", 'Pas connecté ?');
+      if(this.quest && (this.type === "done")){
+        this.toastr.errorToastr("Cette quête a déjà été faite", 'Trop tard !');
+        return;
+      }
+
+      if(this.quest && (this.type === "ongoing")){
+        this.toastr.errorToastr("Vous pouvez pas rejoindre cette quête. Elle est déjà en cours !", 'Trop tard !');
+        return;
+      }
     }
   }
 }

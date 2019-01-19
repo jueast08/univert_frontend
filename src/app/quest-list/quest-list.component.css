@@ -8,7 +8,7 @@
   margin-top: 10px;
   position: absolute;
   bottom: 0;
-  height: calc(100vh - 50%);
+  height: calc(100vh - 300px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,7 @@
   align-items: flex-end;
   opacity: 0.9;
 }
+
 
 .quest-list-frame-inner {
   position: relative;
@@ -94,4 +95,11 @@
 .quest-list-frame-open  .quest-list-frame-inner{
   height: 15px;
   overflowY: hidden;
+}
+
+@media only screen and (min-width: 800px) {
+  .quest-list-frame{
+    height: 100%;
+
+  }
 }

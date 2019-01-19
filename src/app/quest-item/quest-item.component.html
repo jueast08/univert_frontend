@@ -7,6 +7,8 @@
   </div>
   <div class="quest-item-desc">
     {{ quest.title }}
+    <span *ngIf="this.type === 'ongoing' ">(En cours)</span>
+    <span *ngIf="this.type === 'done' ">(faite)</span>
   </div>
   <div class="quest-item-xp">
     <div class="quest-item-xp-img">

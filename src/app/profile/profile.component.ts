@@ -40,10 +40,10 @@ export class ProfileComponent implements OnInit {
     ngOnInit() {
          this.userProfile = this.connectedUserService.userProfile;
          console.log(this.connectedUserService.userProfile);
-        this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
+         this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
     }
 
     addQuest(){
-      this.toastr.infoToastr("Désolé. Mais se connecter avec un mot de passe est une fonctionnalité pour la V2 !", ':)');
+      this.toastr.infoToastr("Désolé, mais proposer une quête est une fonctionnalité pour la V2 ! ", ':)');
     }
 }

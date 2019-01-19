@@ -43,6 +43,7 @@
 .quest-item .quest-item-desc {
   margin-left: 5px;
   color: #999999;
+  text-shadow: none;
   font-weight: bold;
 
   flex: 1 1 auto;

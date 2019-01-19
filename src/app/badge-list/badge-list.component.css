@@ -1,13 +1,16 @@
 .badge-list-frame{
+  height: 100%;
 
 }
 
 .badge-list-content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 
 .badge-list-element {
-  
+
 }
