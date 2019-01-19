@@ -8,6 +8,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ipserver } from './conf';
 
+import * as $ from 'jquery'
+
 export class ResService {
 	validate: boolean
 }
@@ -16,7 +18,7 @@ export class ResService {
     providedIn: 'root'
 })
 export class QuestService {
-	
+
 	private urlForGarden = ipserver + "/univert/univert/questservice/garden/";
 	private urlForUser= ipserver + "/univert/univert/questservice/user/";
 	private urlQuest = ipserver + "/univert/univert/questservice/quests/";
@@ -25,20 +27,35 @@ export class QuestService {
 		public connectedUserService : ConnectedUserService) { }
 
     getQuestsForGarden(id: string) : Observable<QuestList> {
+			let el = $("body");
+			el.addClass("loading")
 		return this.http.get<QuestList>(this.urlForGarden+id+"/quests").pipe(
-            tap(_ => console.log('quest list for garden fetched'))
+            tap(_ => {
+							el.removeClass("loading")
+							console.log('quest list for garden fetched')
+						})
           );
     }
 
 	getQuestsForUser(id: Number) : Observable<QuestList> {
+		let el = $("body");
+		el.addClass("loading")
 		return this.http.get<QuestList>(this.urlForUser+id+"/quests").pipe(
-            tap(_ => console.log('quest list for garden fetched'))
+						tap(_ => {
+							el.removeClass("loading")
+							console.log('quest list for garden fetched')
+						})
           );
     }
 
     takeQuest(id_quest: number, id_user: Number): Observable<ResService> {
-		return this.http.get<ResService>(this.urlQuest+id_quest+"/user/"+id_user).pipe(
-            tap(_ => console.log('quest list for garden fetched'))
+			let el = $("body");
+			el.addClass("loading")
+			return this.http.get<ResService>(this.urlQuest+id_quest+"/user/"+id_user).pipe(
+				tap(_ => {
+					el.removeClass("loading")
+					console.log('quest list for garden fetched')
+				})
 		  );
     }
 
@@ -47,10 +64,16 @@ export class QuestService {
     }
 
     validQuest(id_quest: Number) {
-        return this.http.get<ResService>(this.urlQuest+id_quest+"/done").pipe(
-            tap(_ => console.log('quest list for garden fetched'))
+			let el = $("body");
+	    el.addClass("loading")
+			  return this.http.get<ResService>(this.urlQuest+id_quest+"/done").pipe(
+					tap(_ => {
+						el.removeClass("loading")
+						console.log('quest list for garden fetched')
+					})
+					  
 		  );
     }
 
-    
+
 }
