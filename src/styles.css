@@ -16,7 +16,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: #b3d9b7 !important; /*background color*/
-
+  overflow: hidden;
 }
 
 *{
