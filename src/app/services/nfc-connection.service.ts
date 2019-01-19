@@ -3,7 +3,8 @@ import {Router} from "@angular/router"
 
 import io from "socket.io-client";
 import { ConnectedUserService } from './connected-user.service';
-
+import { ToastrService } from 'ngx-toastr';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class NfcConnectionService {
   private socket = null;
 
   constructor(private router: Router,
+    private toastr: ToastrManager,
     public connectedUserService : ConnectedUserService){ }
 
   init() {
@@ -34,6 +36,8 @@ export class NfcConnectionService {
       if (userId.idUser != "0") {
         this.connectedUserService.connectUser(userId.idUser);
         this.router.navigate(['/jardin']);
+      }else{
+        this.toastr.errorToastr("Désolé, mais il n'y a pas de compte lié à ce badge NFC. Vous êtes sûr qu'il est le bon ?", 'Badge NFC non reconnu');
       }
     } );
   }
