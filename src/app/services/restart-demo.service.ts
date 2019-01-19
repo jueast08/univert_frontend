@@ -17,7 +17,7 @@ export class RestartDemoService {
 
   reset(){
     console.log('hi');
-    return this.http.get<>(this.resetQuestsUrl).pipe(
+    return this.http.get(this.resetQuestsUrl).pipe(
       tap(_ => console.log('reset'))
     ).subscribe();
   }
