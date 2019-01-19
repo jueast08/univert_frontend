@@ -7,7 +7,8 @@ import { ConnectedUserService } from '../services/connected-user.service';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ipserver } from './conf';
-
+import { ToastrService } from 'ngx-toastr';
+import { ToastrManager } from 'ng6-toastr-notifications';
 import * as $ from 'jquery'
 
 export class ResService {
@@ -24,6 +25,7 @@ export class QuestService {
 	private urlQuest = ipserver + "/univert/univert/questservice/quests/";
 
 	constructor(private http: HttpClient,
+		private toastr: ToastrManager,
 		public connectedUserService : ConnectedUserService) { }
 
     getQuestsForGarden(id: string) : Observable<QuestList> {
@@ -55,6 +57,7 @@ export class QuestService {
 				tap(_ => {
 					el.removeClass("loading")
 					console.log('quest list for garden fetched')
+					this.toastr.successToastr("La quête vous a été attribuée", 'Succès');
 				})
 		  );
     }
@@ -63,15 +66,16 @@ export class QuestService {
 	// this.questList.toDo.push(quest);
     }
 
-    validQuest(id_quest: Number) {
+    validQuest(id_quest: Number, xp: Number) {
 			let el = $("body");
 	    el.addClass("loading")
 			  return this.http.get<ResService>(this.urlQuest+id_quest+"/done").pipe(
 					tap(_ => {
 						el.removeClass("loading")
+						this.toastr.successToastr("Vous avez réussi la quête. Vous avez gagné "+xp+" XP", 'Ouais !');
 						console.log('quest list for garden fetched')
 					})
-					  
+
 		  );
     }
 

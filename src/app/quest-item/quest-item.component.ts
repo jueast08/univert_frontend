@@ -72,14 +72,12 @@ export class QuestItemComponent implements OnInit {
     if (this.quest && (this.type === "todo" || this.type==="ongoing" ) && this.connectedUserService.userProfile) {
       console.log(this.quest);
       if (this.context == "profile") {
-        this.questService.validQuest(this.quest.id).subscribe();
+        this.questService.validQuest(this.quest.id, this.quest.experience).subscribe();
         this.questListService.refreshForUser(this.connectedUserService.userProfile.id);
-        this.toastr.successToastr("Vous avez réussi la quête. Vous avez gagné "+this.quest.experience+" XP", 'Ouais !');
       }
       else {
         this.questService.takeQuest(this.quest.id, this.connectedUserService.userProfile.id).subscribe();
         this.questListService.refreshForGarden();
-        this.toastr.successToastr("La quête vous a été attribuée", 'Succès');
       }
     }else{
       if(this.quest && (this.type === "done")){
